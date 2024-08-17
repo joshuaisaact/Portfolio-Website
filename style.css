@@ -1,0 +1,43 @@
+body {
+    display: block;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+nav {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding: 1rem;
+}
+
+nav ul {
+    display: inline-flex;
+    list-style: none;
+    gap: 10%;
+}
+
+#about-me {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    justify-items: center;
+}
+
+#about-me h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#about-me p {
+    padding: 1rem;
+}
+
+#about-me img {
+    border-radius: 50%;
+    width: 20rem;
+    padding: 1rem;
+}
