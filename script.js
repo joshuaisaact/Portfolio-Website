@@ -1,11 +1,12 @@
 'use strict'
 
 // Elements
+const root = document.querySelector(':root');
 const skillsList = document.querySelector(".skills-list");
 const overlay = document.querySelector('.modal-overlay');
 const nav = document.querySelector('.nav')
 const header = document.querySelector('.header');
-
+const profileImg = document.querySelector('.profile-img')
 
 // Skills array (will eventually replace with fetch API)
 const skillFiles = [
@@ -18,13 +19,22 @@ const skillFiles = [
   'postgresql.svg',
   'github.svg',
   'git.svg'
-]
+];
 
+// Colours array (eventually replaced with API)
+const coloursArr = [
+  '#3e4072',
+  '#723e5a',
+  '#72703e',
+  '#563e72'
+];
 
-// Skills list image generator function
+let currentColIndex = 0;
+
+// Skills list image generator function (with animated fade in)
 
 function generateSkillImages() {
-  skillFiles.forEach(file => {
+  skillFiles.forEach((file, index) => {
 
     const img = document.createElement('img');
 
@@ -35,8 +45,32 @@ function generateSkillImages() {
       className: 'skills-icon'
     })
 
+    const hoverText = document.createElement('span');
+    hoverText.className = 'hover-text';
+    hoverText.textContent = file.replace('.svg', '');
+
+
+    img.style.animationDelay = `${index * 0.2}s`;
+
     skillsList.appendChild(img);
   })
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationDelay = `${index * 3}s`;
+        entry.target.classList.add('slide-in');
+        observer.unobserve(entry.target); // Stop observing once the animation starts
+      }
+    });
+  }, {
+    threshold: 1 // Adjust as needed (0.1 means the element triggers when 10% is in view)
+  });
+
+  // Observe each skill icon
+  document.querySelectorAll('.skills-icon').forEach(icon => {
+    observer.observe(icon);
+  });
 }
 
 generateSkillImages();
@@ -86,6 +120,9 @@ nav.addEventListener('mouseout', handleHover.bind(1))
 document.addEventListener('DOMContentLoaded', function () {
   const allSections = document.querySelectorAll('.section')
 
+  allSections.forEach(function (section) {
+    section.classList.add('section-hidden');
+  });
 
   const revealSection = function (entries, observer) {
     const [entry] = entries;
@@ -97,15 +134,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const sectionObserver = new IntersectionObserver(revealSection, {
     root: null,
-    threshold: 0.5,
+    threshold: 0.3,
   });
 
 
   allSections.forEach(function (section) {
     sectionObserver.observe(section);
-    section.classList.add('section-hidden');
-  })
+  });
 });
+
 // Project modal pop-ups
 
 document.querySelectorAll('.info-btn .btn').forEach(button => {
@@ -125,3 +162,26 @@ document.querySelectorAll('.close-btn').forEach(button => {
     overlay.classList.add('hidden');
   });
 });
+
+// Colour changing profile clicker
+
+profileImg.addEventListener('click', function (e) {
+  e.preventDefault();
+  // profileImg.classList.add("start-bouncing");
+  // document.querySelector('.splash-name').classList.add("start-bouncing");
+  profileImg.classList.add("start-bouncing");
+  const splashName = document.querySelector('.splash-name');
+  splashName.classList.add("start-bouncing");
+
+
+  root.style.setProperty('--color-primary', coloursArr[currentColIndex])
+  currentColIndex++;
+  if (currentColIndex >= coloursArr.length) {
+    currentColIndex = 0
+  }
+})
+
+profileImg.onanimationend = () => {
+  profileImg.classList.remove("start-bouncing");
+  document.querySelector(".splash-name").classList.remove("start-bouncing")
+}

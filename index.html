@@ -36,21 +36,25 @@
       </nav>
     </header>
     <main>
-      <section class="section about-me">
-        <!-- <h2>About</h2> -->
+      <section class="about-me">
         <p>
-          Hi! I'm <span class="splash-name">Joshua Tuddenham</span>. I'm a
+          Hi! I'm <span class="splash-name">Joshua Tuddenham.</span> I'm a
           <b>full-stack engineer</b>. Explore my latest projects and check out
           what I'm currently working on.
         </p>
-        <img src="media/profile-picture.jpg" alt="picture of Josh Tuddenham" />
+        <img
+          class="profile-img"
+          src="media/profile-picture.jpg"
+          alt="picture of Josh Tuddenham"
+          id="bounce"
+        />
       </section>
 
-      <section class="section skills">
+      <section class="skills">
         <h2>Technologies</h2>
         <div class="skills-list"></div>
       </section>
-
+      <div class="modal-overlay hidden"></div>
       <section class="section projects" id="projects">
         <h2>Projects</h2>
         <div class="project-grid">
@@ -74,47 +78,50 @@
                 An interactive binary-choice quiz website I made to learn CSS
                 and Javascript, based off Charli XCX's brat album.
               </p>
-              <div class="project-modal hidden">
-                <div class="project-modal-content">
-                  <button class="close-btn">Close</button>
-                  <img src="/media/blog/bratquiz.png" alt="brat image" />
-                  <ul class="project-skills">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Javascript</li>
-                  </ul>
-                  <div class="project-links">
-                    <a href="githublink" class="btn">Github</a>
-                    <a href="websitelink" class="btn">Visit Site</a>
-                  </div>
-                  <div class="project-text-full">
-                    <p>
-                      As part of my journey into web development, I decided to
-                      create a brat-themed quiz using HTML, CSS, and JavaScript.
-                      I wanted to build something that would not only help me
-                      sharpen my coding skills but also something my friends
-                      would enjoy interacting with.
-                    </p>
-                    <p>
-                      I started with the basics in Javascript, setting up the
-                      structure of the quiz. My focus was on making it
-                      user-friendly and straightforward, ensuring that each
-                      question was clear and easy to navigate. This provided a
-                      solid foundation for the project. Next, I used CSS to
-                      bring the quiz to life visually - the style of 'brat' is
-                      very forgiving, so this didn't take me long!
-                    </p>
-                    <p>
-                      The aim was to make the quiz visually appealing without
-                      overwhelming the user — clean, modern, and in line with
-                      the "brat" theme.
-                    </p>
-                    <p>
-                      It served as a practical project to solidify my
-                      understanding of HTML, CSS, and JavaScript, while also
-                      being a fun and unique way to showcase what I’ve learned.
-                    </p>
-                  </div>
+            </div>
+            <div class="project-modal hidden">
+              <div class="project-modal-content">
+                <button class="close-btn">Close</button>
+                <img src="/media/blog/bratquiz.png" alt="brat image" />
+                <ul class="project-skills">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Javascript</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/joshuaisaact/bratQuiz" class="btn"
+                    >Github</a
+                  >
+                  <a href="https://joshuaisaact.github.io/bratQuiz/" class="btn"
+                    >Visit Site</a
+                  >
+                </div>
+                <div class="project-text-full">
+                  <p>
+                    A brat-themed quiz created using HTML, CSS, and JavaScript.
+                    I wanted to build something that would not only help me
+                    sharpen my coding skills but also something my friends would
+                    enjoy interacting with.
+                  </p>
+                  <p>
+                    I started with the basics in Javascript, setting up the
+                    structure of the quiz. My focus was on making it
+                    user-friendly and straightforward, ensuring that each
+                    question was clear and easy to navigate. This provided a
+                    solid foundation for the project. Next, I used CSS to bring
+                    the quiz to life visually - the style of 'brat' is very
+                    forgiving, so this didn't take me long!
+                  </p>
+                  <p>
+                    The aim was to make the quiz visually appealing without
+                    overwhelming the user — clean, modern, and in line with the
+                    "brat" theme.
+                  </p>
+                  <p>
+                    It served as a practical project to solidify my
+                    understanding of HTML, CSS, and JavaScript, while also being
+                    a fun and unique way to showcase what I’ve learned.
+                  </p>
                 </div>
               </div>
             </div>
@@ -213,10 +220,18 @@
           </section>
         </div>
       </section>
+      <!-- <div class="section section-hidden">This will animate</div>
+
+      <button onclick="toggleVisibility()">Toggle Visibility</button>
+
+      <script>
+        function toggleVisibility() {
+          document.querySelector(".section").classList.toggle("section-hidden");
+        }
+      </script> -->
       <footer>
         <p>© 2024 Joshua Tuddenham</p>
       </footer>
-      <div class="modal-overlay hidden"></div>
     </main>
   </body>
 </html>
