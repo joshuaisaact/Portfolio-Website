@@ -14,27 +14,29 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <nav>
-      <p>Joshua Tuddenham</p>
-      <ul class="nav-menu">
-        <!-- <li><a href="about-me">About</a></li> -->
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li>
-          <a href="https://www.linkedin.com/in/joshuatuddenham/"
-            ><img class="nav-img" src="media/nav/linkedin-original.svg"
-          /></a>
-        </li>
-        <li>
-          <a href="https://github.com/joshuaisaact"
-            ><img class="nav-img" src="media/skills/github.svg"
-          /></a>
-        </li>
-      </ul>
-    </nav>
+    <header class="header">
+      <nav class="nav">
+        <p>Joshua Tuddenham</p>
+        <ul class="nav-menu">
+          <!-- <li><a href="about-me">About</a></li> -->
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#blog">Blog</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+          <li>
+            <a href="https://www.linkedin.com/in/joshuatuddenham/"
+              ><img class="nav-img" src="media/nav/linkedin-original.svg"
+            /></a>
+          </li>
+          <li>
+            <a href="https://github.com/joshuaisaact"
+              ><img class="nav-img" src="media/skills/github.svg"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main>
-      <section class="about-me">
+      <section class="section about-me">
         <!-- <h2>About</h2> -->
         <p>
           Hi! I'm <span class="splash-name">Joshua Tuddenham</span>. I'm a
@@ -43,32 +45,178 @@
         </p>
         <img src="media/profile-picture.jpg" alt="picture of Josh Tuddenham" />
       </section>
-      <section class="skills">
+
+      <section class="section skills">
         <h2>Technologies</h2>
         <div class="skills-list"></div>
       </section>
-      <section class="projects" id="projects">
+
+      <section class="section projects" id="projects">
         <h2>Projects</h2>
-      </section>
-      <section class="blogs-section">
-        <h2>Blog</h2>
-        <div class="blog-card">
-          <img src="img/header.png" class="blog-image" alt="" />
-          <h1 class="blog-title">Lorem ipsum dolor sit amet consectetur.</h1>
-          <p class="blog-overview">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-            incidunt fugiat quos porro repellat harum. Adipisci tempora corporis
-            rem cum.
-          </p>
-          <a href="/" class="btn dark">read</a>
+        <div class="project-grid">
+          <div class="project-box">
+            <img
+              src="/media/blog/bratquiz.png"
+              height="195px"
+              width="300px"
+              alt="brat image"
+            />
+            <a href="https://joshuaisaact.github.io/bratQuiz/"
+              ><h3>Brat quiz</h3></a
+            >
+            <div class="project-text">
+              <ul class="project-skills">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+              </ul>
+              <p class="project-headline-desc">
+                An interactive binary-choice quiz website I made to learn CSS
+                and Javascript, based off Charli XCX's brat album.
+              </p>
+              <div class="project-modal hidden">
+                <div class="project-modal-content">
+                  <button class="close-btn">Close</button>
+                  <img src="/media/blog/bratquiz.png" alt="brat image" />
+                  <ul class="project-skills">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                  </ul>
+                  <div class="project-links">
+                    <a href="githublink" class="btn">Github</a>
+                    <a href="websitelink" class="btn">Visit Site</a>
+                  </div>
+                  <div class="project-text-full">
+                    <p>
+                      As part of my journey into web development, I decided to
+                      create a brat-themed quiz using HTML, CSS, and JavaScript.
+                      I wanted to build something that would not only help me
+                      sharpen my coding skills but also something my friends
+                      would enjoy interacting with.
+                    </p>
+                    <p>
+                      I started with the basics in Javascript, setting up the
+                      structure of the quiz. My focus was on making it
+                      user-friendly and straightforward, ensuring that each
+                      question was clear and easy to navigate. This provided a
+                      solid foundation for the project. Next, I used CSS to
+                      bring the quiz to life visually - the style of 'brat' is
+                      very forgiving, so this didn't take me long!
+                    </p>
+                    <p>
+                      The aim was to make the quiz visually appealing without
+                      overwhelming the user — clean, modern, and in line with
+                      the "brat" theme.
+                    </p>
+                    <p>
+                      It served as a practical project to solidify my
+                      understanding of HTML, CSS, and JavaScript, while also
+                      being a fun and unique way to showcase what I’ve learned.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="info-btn">
+              <button class="btn">Learn More</button>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="contact">
+      <section class="section blogs-section" id="blog">
+        <h2>Blog</h2>
+        <div class="blog-grid">
+          <div class="blog-card">
+            <img
+              src="/media/blog/bratquiz.png"
+              class="blog-image"
+              alt=""
+              height="195"
+              width="380"
+            />
+            <h1 class="blog-title">Lorem ipsum dolor sit amet consectetur.</h1>
+            <p class="blog-overview">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+              incidunt fugiat quos porro repellat harum. Adipisci tempora
+              corporis rem cum.
+            </p>
+            <a href="/" class="btn dark">read</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact">
         <h2>Contact</h2>
+        <div class="contact-container">
+          <form
+            action="/"
+            method="POST"
+            name="contactForm"
+            onsubmit="validateForm()"
+          >
+            <div class="inputContainer">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" />
+            </div>
+
+            <div class="inputContainer">
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" />
+            </div>
+
+            <div class="inputContainer">
+              <label for="messageBox">Your Message</label>
+              <textarea type="text" id="messagebox" rows="14"></textarea>
+            </div>
+
+            <input
+              type="submit"
+              id="submitBtn"
+              class="btn"
+              value="Send Message"
+            />
+          </form>
+
+          <section class="section contact-info" id="contact">
+            <div class="contact-line">
+              <img
+                src="/media/nav/email.png"
+                alt="email"
+                width="20"
+                height="20"
+              />
+              <a href="mailto:joshuaisaact@gmail.com">joshuaisaact@gmail.com</a>
+            </div>
+            <div class="contact-line">
+              <img
+                src="/media/skills/github.svg"
+                alt="github"
+                width="20"
+                height="20"
+              />
+              <a href="https://github.com/joshuaisaact"
+                >github.com/joshuaisaact</a
+              >
+            </div>
+            <div class="contact-line">
+              <img
+                src="/media/nav/linkedin-plain.svg"
+                alt="linkedin"
+                width="20"
+                height="20"
+              />
+              <a href="https://www.linkedin.com/in/joshuatuddenham/"
+                >linkedin.com/in/joshuatuddenham</a
+              >
+            </div>
+          </section>
+        </div>
       </section>
       <footer>
-        <p>Copyright © 2024 | Joshua Tuddenham</p>
+        <p>© 2024 Joshua Tuddenham</p>
       </footer>
+      <div class="modal-overlay hidden"></div>
     </main>
   </body>
 </html>
