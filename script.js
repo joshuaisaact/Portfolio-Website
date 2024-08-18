@@ -7,6 +7,7 @@ const overlay = document.querySelector('.modal-overlay');
 const nav = document.querySelector('.nav')
 const header = document.querySelector('.header');
 const profileImg = document.querySelector('.profile-img')
+const globalOverlay = document.querySelector('.global-overlay')
 
 // Skills array (will eventually replace with fetch API)
 const skillFiles = [
@@ -30,6 +31,39 @@ const coloursArr = [
 ];
 
 let currentColIndex = 0;
+
+// Projects array (eventually replaced with DB)
+
+const projects = [
+  {
+    imageSrc: '/media/projects/streamshuffle.jpg',
+    imageAlt: 'Stream Shuffle logo',
+    title: 'Stream Shuffle',
+    projectLink: 'https://joshuaisaact.github.io/StreamShuffle/',
+    githubLink: 'https://github.com/joshuaisaact/StreamShuffle',
+    skills: ['Express', 'Node', 'Javascript'],
+    description: 'My first ever full-stack project, serving a random film to stream from UK streaming services using the TMDB API',
+    fullDescription: [
+      '<p>A static website built to practise using async fetch API within Javascript, and to practise working with an API key to filter and manipulate JSON files.</p>',
+      '<p>The website interacts with an express.js server hosted on Render that contains a private API key, that it uses to redirect data to the client.</p>',
+    ]
+  },
+  {
+    imageSrc: '/media/blog/bratquiz.png',
+    imageAlt: 'brat image',
+    title: 'Brat quiz',
+    projectLink: 'https://joshuaisaact.github.io/bratQuiz/',
+    githubLink: 'https://github.com/joshuaisaact/bratQuiz',
+    skills: ['HTML', 'CSS', 'Javascript'],
+    description: 'An interactive binary-choice quiz website I made to learn CSS and Javascript, based off Charli XCX\'s brat album.',
+    fullDescription: [
+      '<p>A brat-themed quiz created using HTML, CSS, and JavaScript. I wanted to build something that would not only help me sharpen my coding skills but also something my friends would enjoy interacting with.</p>',
+      '<p>I started with the basics in Javascript, setting up the structure of the quiz. My focus was on making it user-friendly and straightforward, ensuring that each question was clear and easy to navigate. This provided a solid foundation for the project. Next, I used CSS to bring the quiz to life visually - the style of "brat" is very forgiving, so this didn\'t take me long!</p>',
+      '<p>The aim was to make the quiz visually appealing without overwhelming the user — clean, modern, and in line with the "brat" theme.</p>',
+      '<p>It served as a practical project to solidify my understanding of HTML, CSS, and JavaScript, while also being a fun and unique way to showcase what I’ve learned.</p>'
+    ]
+  },
+]
 
 // Skills list image generator function (with animated fade in)
 
@@ -74,6 +108,63 @@ function generateSkillImages() {
 }
 
 generateSkillImages();
+
+// Project box generator function
+
+function createProjectBox(projectData) {
+  const projectBox = document.createElement('div');
+  projectBox.className = "project-box";
+  projectBox.innerHTML = `<img
+  src = "${projectData.imageSrc}"
+  height = "195px"
+  width = "300px"
+  alt = "${projectData.imageAlt}"
+    />
+            <a href="${projectData.projectLink}"
+              ><h3>${projectData.title}</h3></a
+            >
+            <div class="project-text">
+              <ul class="project-skills">
+                <li>${projectData.skills[0]}</li>
+                <li>${projectData.skills[1]}</li>
+                <li>${projectData.skills[2]}</li>
+              </ul>
+              <p class="project-headline-desc">
+                ${projectData.description}
+              </p>
+            </div>
+            <div class="project-modal hidden">
+              <div class="project-modal-content">
+                <button class="close-btn">Close</button>
+                <img src="${projectData.imageSrc}" alt="${projectData.imageAlt}" />
+                <ul class="project-skills">
+                <li>${projectData.skills[0]}</li>
+                <li>${projectData.skills[1]}</li>
+                <li>${projectData.skills[2]}</li>
+                </ul>
+                <div class="project-links">
+                  <a href="${projectData.githubLink}" class="btn"
+                    >Github</a
+                  >
+                  <a href="${projectData.projectLink}" class="btn"
+                    >Visit Site</a
+                  >
+                </div>
+                <div class="project-text-full">
+                  ${projectData.fullDescription.join("")}
+                </div>
+              </div>
+            </div>
+            <div class="info-btn">
+              <button class="btn">Learn More</button>
+            </div>`
+
+  document.querySelector('.project-grid').appendChild(projectBox);
+
+}
+
+projects.forEach(createProjectBox);
+
 
 // Event listeners
 
@@ -149,6 +240,7 @@ document.querySelectorAll('.info-btn .btn').forEach(button => {
   button.addEventListener('click', function () {
     const projectBox = this.closest('.project-box');
     const projectModal = projectBox.querySelector('.project-modal')
+    globalOverlay.classList.remove('hidden')
     projectModal.classList.remove('hidden')
     overlay.classList.remove('hidden');
   });
@@ -158,6 +250,7 @@ document.querySelectorAll('.close-btn').forEach(button => {
   button.addEventListener('click', function () {
     const projectBox = this.closest('.project-box');
     const projectModal = projectBox.querySelector('.project-modal')
+    globalOverlay.classList.add('hidden')
     projectModal.classList.add('hidden');
     overlay.classList.add('hidden');
   });
