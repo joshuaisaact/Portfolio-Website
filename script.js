@@ -36,7 +36,7 @@ let currentColIndex = 0;
 
 const projects = [
   {
-    imageSrc: '/media/projects/streamshuffle.jpg',
+    imageSrc: './media/projects/streamshuffle.jpg',
     imageAlt: 'Stream Shuffle logo',
     title: 'Stream Shuffle',
     projectLink: 'https://joshuaisaact.github.io/StreamShuffle/',
@@ -50,7 +50,7 @@ const projects = [
     ]
   },
   {
-    imageSrc: '/media/blog/bratquiz.png',
+    imageSrc: './media/blog/bratquiz.png',
     imageAlt: 'brat image',
     title: 'Brat quiz',
     projectLink: 'https://joshuaisaact.github.io/bratQuiz/',
