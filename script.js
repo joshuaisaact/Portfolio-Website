@@ -46,6 +46,7 @@ const projects = [
     fullDescription: [
       '<p>A static website built to practise using async fetch API within Javascript, and to practise working with an API key to filter and manipulate JSON files.</p>',
       '<p>The website interacts with an express.js server hosted on Render that contains a private API key, that it uses to redirect data to the client.</p>',
+      '<p>The TMDB API doesn\'t let ypu filter by films available on UK streaming services, so data manipulation was required to introduce this new functionality</p>'
     ]
   },
   {
@@ -119,6 +120,7 @@ function createProjectBox(projectData) {
   height = "195px"
   width = "300px"
   alt = "${projectData.imageAlt}"
+  class = "project-img-preview"
     />
             <a href="${projectData.projectLink}"
               ><h3>${projectData.title}</h3></a
@@ -135,8 +137,10 @@ function createProjectBox(projectData) {
             </div>
             <div class="project-modal hidden">
               <div class="project-modal-content">
-                <button class="close-btn">Close</button>
-                <img src="${projectData.imageSrc}" alt="${projectData.imageAlt}" />
+                <button class="close-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="var(--color-primary)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><line x1="30" y1="30" x2="70" y2="70"></line> <line x1="70" y1="30" x2="30" y2="70"></line></svg>
+                </button>
+                <img src="${projectData.imageSrc}" alt="${projectData.imageAlt}" class="img-modal"/>
                 <ul class="project-skills">
                 <li>${projectData.skills[0]}</li>
                 <li>${projectData.skills[1]}</li>

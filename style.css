@@ -74,6 +74,21 @@ nav {
   transition: all 0.3s;
 }
 
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 48px !important;
+  width: 48px;
+  border-radius: 50%;
+  background-color: white;
+  color: var(--color-primary);
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-width: 0;
+  border: 2px solid var(--color-primary);
+}
+
 .btn:hover {
   background-color: var(--color-primary);
   color: white;
@@ -229,11 +244,31 @@ footer {
   font-weight: 400;
 }
 
-.project-box img {
+.project-img-preview {
   width: 100%;
   max-height: 195px;
   object-fit: cover;
   display: block;
+  border-radius: 5px;
+}
+
+.img-modal {
+  max-height: 300px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 5px;
+}
+
+.project-box a {
+  text-decoration: underline;
+  text-decoration-color: var(--color-primary);
+  font-size: larger;
+}
+
+.project-box p {
+  font-size: large;
+  margin: 1rem;
 }
 
 .modal-overlay {
@@ -264,20 +299,11 @@ footer {
 
 .project-skills {
   width: auto;
-  margin: 0.5rem auto;
+  margin: 1rem auto;
   text-align: center;
   list-style-type: none;
   display: flex;
   justify-content: space-evenly;
-}
-
-.close-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  height: 48px !important;
-  width: 48px;
-  border-radius: 50%;
 }
 
 .blog-grid {
@@ -336,7 +362,7 @@ form label {
 form input[type="text"],
 form textarea {
   border: 2px solid;
-  border-color: #3e7256;
+  border-color: var(--color-primary);
   padding: 0.5rem;
   font-family: inherit;
   font-size: 1.2rem;
@@ -393,5 +419,18 @@ form textarea {
 
   .skills-list {
     justify-content: center;
+  }
+
+  .about-me,
+  .skills,
+  .projects,
+  .blogs-section,
+  .contact {
+    padding: 5rem 0;
+  }
+
+  .project-grid {
+    display: flex;
+    flex-direction: column;
   }
 }
