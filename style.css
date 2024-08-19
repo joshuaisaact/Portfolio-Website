@@ -231,7 +231,7 @@ footer {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   z-index: 1010;
   overflow-y: auto;
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
 }
 
 .project-modal-content {
@@ -430,6 +430,14 @@ form textarea {
   }
 
   .project-grid {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  .project-modal {
+    max-width: none;
+  }
+  .contact-container {
     display: flex;
     flex-direction: column;
   }

@@ -24,10 +24,14 @@ const skillFiles = [
 
 // Colours array (eventually replaced with API)
 const coloursArr = [
-  '#3e4072',
+  '#e07a14',
   '#723e5a',
-  '#72703e',
-  '#563e72'
+  '#9c852a',
+  '#C589A3',
+  '#42d499',
+  '#5459de',
+  '#481682',
+  '#3e7256'
 ];
 
 let currentColIndex = 0;
