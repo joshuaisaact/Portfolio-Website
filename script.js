@@ -196,7 +196,7 @@ projects.forEach(createProjectBox);
 
 async function loadBlogPosts() {
   try {
-    const res = await fetch('/blog/index.json');
+    const res = await fetch('https://joshuaisaact.github.io/Portfolio-Website/blog/index.json');
     // console.log(res);
     if (!res.ok) {
       throw new Error(`HTTP error! status: ${res.status}`);
