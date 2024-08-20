@@ -1,4 +1,4 @@
-baseURL = 'http://127.0.0.1:5500/blog'
+baseURL = 'https://joshuaisaact.github.io/Portfolio-Website/blog'
 languageCode = 'en-gb'
 title = 'Josh Development Blog'
 theme = ""
