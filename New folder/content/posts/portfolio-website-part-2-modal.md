@@ -20,9 +20,9 @@ Given this single page approach, I knew I wanted the ability to easily add addit
 
 To tackle this, i built the first card directly into the HTML with a separate "project-card" div, and then once i was happy with it, i converted it into an immediately invoked javascript factory functon!  
 
-FUNNY MEME FACTORY IMAGE  
+{{< figure src="/Portfolio-Website/blog/media/blog/depeche modal/allthedivs.png" title="Yes, I mean EVERYTHING">}}
 
-Why do it this way? You are probably thinking. The reasons were mainly:  
+Why do it this way? What could possibly be my thought process? The reasons were mainly:  
 
 1. I wanted the ability to pull data from a database in JSON format and convert it into project cards  
 
