@@ -1,15 +1,16 @@
 +++
-title = 'Portfolio Website Part 1'
+title = 'On Portfolio Website Design'
 date = 2024-08-19T20:00:43+01:00
 draft = false
-featuredimage = "/media/blog/driving-portfolio.png"
+featuredimage = "media/blog/driving-portfolio.png"
+summary = "My first ever article! My design philosophy for this portfolio."
 +++
 
 ### <center>Design Philosophy</center>
 
 As I dive into building my portfolio website, I’m torn between two extremes. On one hand, I've come across some truly impressive portfolio sites that, while visually stunning, demand too much from their visitors. Take, for instance, a 16-bit SNES RPG-style portfolio I found, where visitors had to maneuver a character just to access sections like "About" or "Projects." Cool? Definitely. Practical? Not so much. I think any prospective visitor should be able to get to the meat and bones of the content within 5-10 seconds of visiting your page. Nobody has time to play a game to read someone's career history, as impressive as that initially seems.
 
-{{< figure src="/media/blog/driving-portfolio.png" alt="gaming portfolio" caption="It does look pretty cool though, I'll give them that" width="80%" >}}  
+{{< figure src="/blog/media/blog/driving-portfolio.png" alt="gaming portfolio" caption="It does look pretty cool though, I'll give them that" width="80%" >}}  
 
 On the other end of the spectrum, some portfolios were essentially glorified online CVs, stripped of any real personality or creativity. They get the job done but fail to leave a lasting impression.
 

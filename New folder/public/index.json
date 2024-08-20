@@ -1,0 +1,36 @@
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": "Josh Development Blog",
+  "home_page_url": "http://127.0.0.1:1313/blog/",
+  "feed_url": "http://127.0.0.1:1313/blog/index.json",
+  "description": "<no value>",
+  "items": [
+    {
+      "id": "/blog/posts/portfolio-website-part-3/",
+      "url": "/blog/posts/portfolio-website-part-3/",
+      "title": "Hugo with the flow",
+      "content_text": "Effortless website building ",
+      "featured_image": "/blog/",
+      "date_published": "2024-08-20T06:00:24+01:00",
+      "date_modified": "2024-08-20T06:00:24+01:00"
+    },
+    {
+      "id": "/blog/posts/portfolio-website-part-2-modal/",
+      "url": "/blog/posts/portfolio-website-part-2-modal/",
+      "title": "Portfolio Website Part 2 Modal",
+      "content_text": "Depeche Modal Let me see you stripped down to the bone. A modal is a a web page element that displays in front of and deactivates all other page content. To return to the main content, the user must engage with the modal by completing an action or by closing it.\nWhen I first conceived of my portfolio site, I spent a few days wondering whether I wanted to take a single-page approach, or a multi-page approach.",
+      "featured_image": "/blog/media/blog/depeche modal/depeche mode.png",
+      "date_published": "2024-08-19T21:16:22+01:00",
+      "date_modified": "2024-08-19T21:16:22+01:00"
+    },
+    {
+      "id": "/blog/posts/portfolio-website-part-1/",
+      "url": "/blog/posts/portfolio-website-part-1/",
+      "title": "Portfolio Website Part 1",
+      "content_text": "Design Philosophy As I dive into building my portfolio website, I’m torn between two extremes. On one hand, I\u0026rsquo;ve come across some truly impressive portfolio sites that, while visually stunning, demand too much from their visitors. Take, for instance, a 16-bit SNES RPG-style portfolio I found, where visitors had to maneuver a character just to access sections like \u0026ldquo;About\u0026rdquo; or \u0026ldquo;Projects.\u0026rdquo; Cool? Definitely. Practical? Not so much. I think any prospective visitor should be able to get to the meat and bones of the content within 5-10 seconds of visiting your page.",
+      "featured_image": "/blog/media/blog/driving-portfolio.png",
+      "date_published": "2024-08-19T20:00:43+01:00",
+      "date_modified": "2024-08-19T20:00:43+01:00"
+    }
+  ]
+}

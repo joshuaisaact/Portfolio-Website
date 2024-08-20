@@ -3,6 +3,7 @@
 // Elements
 const root = document.querySelector(':root');
 const skillsList = document.querySelector(".skills-list");
+const blogList = document.querySelector('.blog-grid')
 const overlay = document.querySelector('.modal-overlay');
 const nav = document.querySelector('.nav')
 const header = document.querySelector('.header');
@@ -190,6 +191,47 @@ function createProjectBox(projectData) {
 }
 
 projects.forEach(createProjectBox);
+
+// Blog generator function
+
+async function loadBlogPosts() {
+  try {
+    const res = await fetch('/blog/index.json');
+    // console.log(res);
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status}`);
+    }
+
+    const data = await res.json();
+    console.log(data);
+    data.items.forEach(item => {
+      const postElement = document.createElement('div');
+
+      postElement.innerHTML = `
+      <div class="blog-card">
+            <img
+              src="${item.featured_image}"
+              class="blog-image"
+              alt=""
+              height="195"
+              width="380"
+            />
+            <h1 class="blog-title">${item.title}</h1>
+            <p class="blog-overview">
+              ${item.content_text}
+            </p>
+            <a href="${item.url}" class="btn dark">read</a>
+          </div>
+      `;
+
+      blogList.appendChild(postElement);
+    });
+  } catch (e) {
+    console.error('Error fetching JSON feed:', e)
+  }
+}
+
+loadBlogPosts();
 
 
 // Event listeners

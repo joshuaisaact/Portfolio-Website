@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on My Blog</title>
+    <title>Posts on Josh Development Blog</title>
     <link>http://localhost:1313/blog/posts/</link>
-    <description>Recent content in Posts on My Blog</description>
+    <description>Recent content in Posts on Josh Development Blog</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
     <lastBuildDate>Tue, 20 Aug 2024 06:00:24 +0100</lastBuildDate>
@@ -20,7 +20,7 @@
       <link>http://localhost:1313/blog/posts/portfolio-website-part-2-modal/</link>
       <pubDate>Mon, 19 Aug 2024 21:16:22 +0100</pubDate>
       <guid>http://localhost:1313/blog/posts/portfolio-website-part-2-modal/</guid>
-      <description>Depeche Modal ##How i learned to stop worrying and love programmically generated divs at the global level.</description>
+      <description>Depeche Modal ##How i learned to stop worrying and love programmically generated divs at the global level.&#xA;A modal is a a web page element that displays in front of and deactivates all other page content. To return to the main content, the user must engage with the modal by completing an action or by closing it.&#xA;When I first conceived of my portfolio site, I spent a few days wondering whether I wanted to take a single-page approach, or a multi-page approach.</description>
     </item>
     <item>
       <title>Portfolio Website Part 1</title>

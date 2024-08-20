@@ -3,9 +3,9 @@
   <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Website Part 2 Modal</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <script src="/js/script.js" defer></script>
+    <title>Depeche Modal</title>
+    <link rel="stylesheet" href="http://127.0.0.1:1313/blog/css/style.css" />
+    <script src="http://127.0.0.1:1313/blog/js/script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,12 +23,16 @@
         <li><a class="nav-link" href="#contact">Contact</a></li>
         <li>
           <a href="https://www.linkedin.com/in/joshuatuddenham/"
-            ><img class="nav-img" src="/media/nav/linkedin-original.svg"
+            ><img
+              class="nav-img"
+              src="http://127.0.0.1:1313/blog/media/nav/linkedin-original.svg"
           /></a>
         </li>
         <li>
           <a href="https://github.com/joshuaisaact"
-            ><img class="nav-img" src="/media/skills/github.svg"
+            ><img
+              class="nav-img"
+              src="http://127.0.0.1:1313/blog/media/skills/github.svg"
           /></a>
         </li>
       </ul>
@@ -37,7 +41,7 @@
   <body>
     <article>
       <img
-        src="/blog/"
+        src="/blog/media/blog/depeche%20modal/depeche%20mode.png"
         alt="Featured image"
         style="
           max-height: 200px;
@@ -47,12 +51,61 @@
           margin-top: 2rem;
         "
       />
-      <h1>Portfolio Website Part 2 Modal</h1>
+      <h1>Depeche Modal</h1>
       
       <p>19 August 2024</p>
-      <p>Estimated reading time: 🕑1 minutes</p>
-      <h1 id="depeche-modal">Depeche Modal</h1>
-<p>##How i learned to stop worrying and love programmically generated divs at the global level.</p>
+      <p>Estimated reading time: 🕑3 minutes</p>
+       <h1 id="depeche-modal">Depeche Modal</h1>
+<h3 id="let-me-see-you-stripped-down-to-the-bone">Let me see you stripped down to the bone.</h3>
+<p>A modal is a a web page element that displays in front of and deactivates all other page content. To return to the main content, the user must engage with the modal by completing an action or by closing it.</p>
+<p>When I first conceived of my portfolio site, I spent a few days wondering whether I wanted to take a single-page approach, or a multi-page approach.</p>
+<p>In the end, I landed on a combination of the two, because what is a portfolio if not an attempt to demonstrate that you can cover multiple bases. I would do my project section with a single page approach, and the blog as a sub-site, hosted across multiple pages.</p>
+<p>Given this single page approach, I knew I wanted the ability to easily add additional projects over time, have these projects in a summarized &lsquo;card&rsquo; format within a grid, and i wanted to use a modal window to give the visitor a more detailed view upon a click of a button.</p>
+<p>To tackle this, i built the first card directly into the HTML with a separate &ldquo;project-card&rdquo; div, and then once i was happy with it, i converted it into an immediately invoked javascript factory functon!</p>
+<p>FUNNY MEME FACTORY IMAGE</p>
+<p>Why do it this way? You are probably thinking. The reasons were mainly:</p>
+<ol>
+<li>
+<p>I wanted the ability to pull data from a database in JSON format and convert it into project cards</p>
+</li>
+<li>
+<p>If i decide to change the look of the cards afrer i have 20 projects in the database, i only have to edit the one function</p>
+</li>
+<li>
+<p>It means at a later date i could create a no-code frontend for adding additional projects</p>
+</li>
+<li>
+<p>The html file wouldnt get too bloated with duplicates, as they are all generated at runtime.</p>
+</li>
+</ol>
+<p>I did this with one long template literal, as i think thats the easiest to read:</p>
+<p>IMAGE OF GENERATOR FUNCTION</p>
+<p>After some testing with some dummy data, it worked! I am focusing on getting the front end working and hosted on github pages initially, building the actual db will come later.</p>
+<p>The next step was to build the modals that allow the visitor to see more information, and this, dear reader, is where disaster struck.</p>
+<p>Lets go through the desired behaviour, shall we?</p>
+<p>This is what i wanted to happen:</p>
+<ol>
+<li>
+<p>User clicks the read more link</p>
+</li>
+<li>
+<p>A new window pops up on top of the rest of the page content, with a longer summary, additonal links, a bigger image etc</p>
+</li>
+<li>
+<p>The background behind that image is both blurred and / or greyed out, so it doesnt distract from or interfere with the pop up.</p>
+</li>
+<li>
+<p>the user can then either click the X icon in the window (or hit esc on desktop) to close the modal.</p>
+</li>
+</ol>
+<p>Sounds relatively simple, doesnt it?</p>
+<p>Heres where the trouble began.</p>
+<p>IMAGE OF MODAL BLURRED</p>
+<p>Overlay to blur and dull background.</p>
+<p>Errors! Z index wont work.</p>
+<p>Moved into div, doesnt block enough of the page.</p>
+<p>Generator function global object</p>
+<p>Fix event handler.</p>
 
     </article>
     <footer>

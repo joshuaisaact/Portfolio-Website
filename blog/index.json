@@ -1,0 +1,39 @@
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": "Josh Development Blog",
+  "home_page_url": "http://127.0.0.1:1313/blog/",
+  "feed_url": "http://127.0.0.1:1313/blog/index.json",
+  "description": "<no value>",
+  "items": [
+    {
+      "id": "/blog/posts/portfolio-website-part-3/",
+      "url": "/blog/posts/portfolio-website-part-3/",
+      "title": "Hugo with the flow",
+      "content_text": "How I used Hugo to automate my blog static site generation, and how to set up Hugo with an existing website",
+      "summary": "How I used Hugo to automate my blog static site generation, and how to set up Hugo with an existing website",
+      "featured_image": "/blog/media/blog/hugo flow/hugo-original-wordmark.svg",
+      "date_published": "2024-08-20T06:00:24+01:00",
+      "date_modified": "2024-08-20T06:00:24+01:00"
+    },
+    {
+      "id": "/blog/posts/portfolio-website-part-2-modal/",
+      "url": "/blog/posts/portfolio-website-part-2-modal/",
+      "title": "Depeche Modal",
+      "content_text": "Project cards, modals, and how much a rogue Z index can send one man spiralling into a pit of dispair",
+      "summary": "Project cards, modals, and how much a rogue Z index can send one man spiralling into a pit of dispair",
+      "featured_image": "/blog/media/blog/depeche modal/depeche mode.png",
+      "date_published": "2024-08-19T21:16:22+01:00",
+      "date_modified": "2024-08-19T21:16:22+01:00"
+    },
+    {
+      "id": "/blog/posts/portfolio-website-part-1/",
+      "url": "/blog/posts/portfolio-website-part-1/",
+      "title": "On Portfolio Website Design",
+      "content_text": "My first ever article! My design philosophy for this portfolio.",
+      "summary": "My first ever article! My design philosophy for this portfolio.",
+      "featured_image": "/blog/media/blog/driving-portfolio.png",
+      "date_published": "2024-08-19T20:00:43+01:00",
+      "date_modified": "2024-08-19T20:00:43+01:00"
+    }
+  ]
+}

@@ -132,9 +132,10 @@ nav ul {
 .about-me,
 .skills,
 .projects,
-.blogs-section,
+.blogs,
 .contact {
-  padding: 15rem 0;
+  padding-top: 5rem;
+  padding-bottom: 25rem;
 }
 
 .section {
@@ -154,6 +155,7 @@ nav ul {
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   justify-items: center;
+  padding-top: 15rem;
 }
 
 .about-me h2 {
@@ -438,7 +440,7 @@ form textarea {
   .about-me,
   .skills,
   .projects,
-  .blogs-section,
+  .blog,
   .contact {
     padding: 5rem 0;
   }

@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ .Title }}</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <script src="/js/script.js" defer></script>
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css" />
+    <script src="{{ .Site.BaseURL }}js/script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,12 +23,16 @@
         <li><a class="nav-link" href="#contact">Contact</a></li>
         <li>
           <a href="https://www.linkedin.com/in/joshuatuddenham/"
-            ><img class="nav-img" src="/media/nav/linkedin-original.svg"
+            ><img
+              class="nav-img"
+              src="{{ .Site.BaseURL }}media/nav/linkedin-original.svg"
           /></a>
         </li>
         <li>
           <a href="https://github.com/joshuaisaact"
-            ><img class="nav-img" src="/media/skills/github.svg"
+            ><img
+              class="nav-img"
+              src="{{ .Site.BaseURL }}media/skills/github.svg"
           /></a>
         </li>
       </ul>
