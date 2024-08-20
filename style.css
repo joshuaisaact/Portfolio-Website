@@ -27,9 +27,9 @@ a {
 h2 {
   padding: 1rem;
   text-decoration: underline;
-  text-decoration: underline;
-  text-underline-offset: 1px;
   text-decoration-color: var(--color-primary);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
 }
 
 h3 {
@@ -52,8 +52,9 @@ nav {
   padding: 2rem 1rem;
   font-size: 1.25rem;
   text-decoration: underline;
-  text-underline-offset: 1px;
   text-decoration-color: var(--color-primary);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
   font-weight: 500;
 }
 
@@ -360,6 +361,13 @@ footer {
   margin-bottom: 2rem;
 }
 
+.contact-line a {
+  text-decoration: underline;
+  text-decoration-color: var(--color-primary);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
 form label {
   font-weight: 500;
   margin: 0.5rem 0;
@@ -377,7 +385,7 @@ form textarea {
 }
 
 .start-bouncing {
-  animation: bounce 1s ease-in 1;
+  animation: bounce 0.4s ease-in 1;
 }
 
 @keyframes bounce {

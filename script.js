@@ -117,11 +117,11 @@ function generateSkillImages() {
       if (entry.isIntersecting) {
         entry.target.style.animationDelay = `${index * 3}s`;
         entry.target.classList.add('slide-in');
-        observer.unobserve(entry.target); // Stop observing once the animation starts
+        observer.unobserve(entry.target);
       }
     });
   }, {
-    threshold: 1 // Adjust as needed (0.1 means the element triggers when 10% is in view)
+    threshold: 1
   });
 
   // Observe each skill icon
