@@ -14,10 +14,12 @@ const skillFiles = [
   'html5.svg',
   'css3.svg',
   'javascript.svg',
+  'typescript.svg',
   'nodejs.svg',
   'express.svg',
   'npm.svg',
   'postgresql.svg',
+  'hugo.svg',
   'github.svg',
   'git.svg'
 ];
@@ -54,6 +56,21 @@ const projects = [
     ]
   },
   {
+    imageSrc: './media/projects/portfoliowebsite.png',
+    imageAlt: 'Portfolio Website',
+    title: 'Portfolio Website',
+    projectLink: 'https://joshuaisaact.github.io/Portfolio-Website/',
+    githubLink: 'https://github.com/joshuaisaact/Portfolio-Website',
+    skills: ['Javascript', 'Express', 'Hugo', 'CSS'],
+    description: 'My portfolio website, created using a mixture of technologies, primarily Javascript for the main site, Hugo for the blog, and Express for the back-end.',
+    fullDescription: [
+      '<p>A portfolio website to host my blog, covering my stream-of-consciousness thoughts and work on personal projects, as well as a way of demonstrating where I am currently at, in terms of front-end development</p>',
+      '<p>The general design philosophy was that most portfolio websites are either form or function, but rarely both - I wanted to design something that was quite minimalistic and easy to parse on first visit, but with a ton of themes that really played with form.</p>',
+      '<p>The majority of the site is built from scratch using JS, HTML and CSS, with various themes using additional libraries as required, however the blog is built using Hugo, a static site generator that auto-compiles html static sites from markdown files. This is using custom Hugo themes I built.</p>',
+      '<p>You can read more about the design philosophy and process of my portfolio site on my blog.</p>'
+    ]
+  },
+  {
     imageSrc: './media/blog/bratquiz.png',
     imageAlt: 'brat image',
     title: 'Brat quiz',
@@ -68,6 +85,7 @@ const projects = [
       '<p>It served as a practical project to solidify my understanding of HTML, CSS, and JavaScript, while also being a fun and unique way to showcase what I’ve learned.</p>'
     ]
   },
+
 ]
 
 // Skills list image generator function (with animated fade in)
