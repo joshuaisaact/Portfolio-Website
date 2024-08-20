@@ -1,0 +1,14 @@
+baseURL = 'http://localhost:1313/blog/'
+languageCode = 'en-gb'
+title = 'Josh Development Blog'
+theme = ""
+
+[params]
+mainSections = ["posts"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      hardWraps = true
+
+disableKinds = ["home"]
