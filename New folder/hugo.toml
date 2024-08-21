@@ -19,3 +19,6 @@ disableKinds = ["home"]
   section = ["HTML", "JSON"]
   taxonomy = ["HTML", "JSON"]
   taxonomyTerm = ["HTML", "JSON"]
+
+  [taxonomies]
+  tag = "tags"

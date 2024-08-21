@@ -4,6 +4,7 @@ date = 2024-08-20T06:00:24+01:00
 draft = false
 featuredimage = "media/blog/hugo flow/hugo-original-wordmark.svg"
 summary = "How I used Hugo to automate my blog static site generation, and how to set up Hugo with an existing website"
+tags = ["Hugo", "Javascript", "CSS", "HTML"]
 +++
 
 ### Effortless website building

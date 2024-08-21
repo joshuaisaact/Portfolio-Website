@@ -12,18 +12,18 @@
       "content_text": "How I used Hugo to automate my blog static site generation, and how to set up Hugo with an existing website",
       "summary": "How I used Hugo to automate my blog static site generation, and how to set up Hugo with an existing website",
       "featured_image": "/Portfolio-Website/blog/media/blog/hugo flow/hugo-original-wordmark.svg",
-      "date_published": "2024-08-20T06:00:24+01:00",
-      "date_modified": "2024-08-20T06:00:24+01:00"
+      "date_published": "20 August 2024",
+      "date_modified": "20 August 2024"
     },
     {
-      "id": "/Portfolio-Website/blog/posts/portfolio-website-part-2-modal/",
-      "url": "/Portfolio-Website/blog/posts/portfolio-website-part-2-modal/",
+      "id": "/Portfolio-Website/blog/posts/24-08-21-portfolio-website-2---depeche-modal/",
+      "url": "/Portfolio-Website/blog/posts/24-08-21-portfolio-website-2---depeche-modal/",
       "title": "Depeche Modal",
       "content_text": "Project cards, modals, and how much a rogue Z index can send one man spiralling into a pit of dispair",
       "summary": "Project cards, modals, and how much a rogue Z index can send one man spiralling into a pit of dispair",
       "featured_image": "/Portfolio-Website/blog/media/blog/depeche modal/depeche mode.png",
-      "date_published": "2024-08-19T21:16:22+01:00",
-      "date_modified": "2024-08-19T21:16:22+01:00"
+      "date_published": "19 August 2024",
+      "date_modified": "19 August 2024"
     },
     {
       "id": "/Portfolio-Website/blog/posts/portfolio-website-part-1/",
@@ -32,8 +32,8 @@
       "content_text": "My first ever article! My design philosophy for this portfolio.",
       "summary": "My first ever article! My design philosophy for this portfolio.",
       "featured_image": "/Portfolio-Website/blog/media/blog/driving-portfolio.png",
-      "date_published": "2024-08-19T20:00:43+01:00",
-      "date_modified": "2024-08-19T20:00:43+01:00"
+      "date_published": "19 August 2024",
+      "date_modified": "19 August 2024"
     }
   ]
 }

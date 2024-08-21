@@ -4,6 +4,7 @@ date = 2024-08-19T21:16:22+01:00
 draft = false
 featuredimage = "media/blog/depeche modal/depeche mode.png"
 summary = "Project cards, modals, and how much a rogue Z index can send one man spiralling into a pit of dispair"
+tags = ["Javascript", "CSS", "HTML", "Portfolio Website"]
 +++
 
 # Depeche Modal
@@ -34,29 +35,27 @@ Why do it this way? What could possibly be my thought process? The reasons were 
 
 I did this with one long template literal, as i think thats the easiest to read:  
 
-IMAGE OF GENERATOR FUNCTION  
+{{< figure src="image-gen-func.png" title="Next week on 'divs that got slightly out of hand'">}}
 
-After some testing with some dummy data, it worked! I am focusing on getting the front end working and hosted on github pages initially, building the actual db will come later.  
+My build process for the site is front-end first, so currently I'm working on getting my initial template complete. That means that this function was going to be tested on a javascript array of objects, rather than a database - the idea was that with this functionality working, I could then point it at a database at a later date, and have it consume a JSON.
 
-The next step was to build the modals that allow the visitor to see more information, and this, dear reader, is where disaster struck.  
+## Highway to Hell
 
-Lets go through the desired behaviour, shall we?  
+##### Isn't that the wrong band?
+
+The next step was to build the modals that allow the visitor to see more information, and this, dear reader, is where disaster struck.  Here was the desired behaviour:  
 
 This is what i wanted to happen:  
 
-1. User clicks the read more link  
+1. A window pops up on top of the rest of the page content, with a longer summary, additonal links, and a bigger image. A 'details page'.
 
-2. A new window pops up on top of the rest of the page content, with a longer summary, additonal links, a bigger image etc  
+2. The rest of the site behind the pop-up details page is both blurred and / or greyed out, so it doesnt distract from or interfere with the pop up.  
 
-3. The background behind that image is both blurred and / or greyed out, so it doesnt distract from or interfere with the pop up.  
+3. The user can then either click the close icon in the top right corner of the window (or hit the esc key on desktop) to close the modal.  
 
-4. the user can then either click the X icon in the window (or hit esc on desktop) to close the modal.  
+Sounds relatively simple, doesnt it?  Welcome to my pain:
 
-Sounds relatively simple, doesnt it?  
-
-Heres where the trouble began.  
-
-IMAGE OF MODAL BLURRED  
+{{< figure src="modal hell.png" title="Don't grab your glasses, that's just my modal sat on top of all my content">}}
 
 Overlay to blur and dull background.  
 

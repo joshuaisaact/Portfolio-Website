@@ -161,7 +161,10 @@ function createProjectBox(projectData) {
             <div class="project-modal hidden">
               <div class="project-modal-content">
                 <button class="close-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="var(--color-primary)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><line x1="30" y1="30" x2="70" y2="70"></line> <line x1="70" y1="30" x2="30" y2="70"></line></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="var(--color-primary)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="30" y1="30" x2="70" y2="70"></line>
+                <line x1="70" y1="30" x2="30" y2="70"></line>
+                </svg>
                 </button>
                 <img src="${projectData.imageSrc}" alt="${projectData.imageAlt}" class="img-modal"/>
                 <ul class="project-skills">
@@ -251,6 +254,16 @@ document.querySelector('.nav-menu').addEventListener('click', function (e) {
     window.location.href = href;
   }
 })
+
+// Return to top
+
+document.getElementById('return-to-top').addEventListener('click', function (e) {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
 
 // Nav bar - fade on hover
 

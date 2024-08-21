@@ -1,0 +1,13 @@
+{{ define "main" }}
+<h1>Posts tagged with "{{ .Title }}" TEST</h1>
+<ul>
+  {{ range .Pages }}
+  <li>
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    <p>{{ .Summary }}</p>
+  </li>
+  {{ else }}
+  <li>No posts found for this tag.</li>
+  {{ end }}
+</ul>
+{{ end }}

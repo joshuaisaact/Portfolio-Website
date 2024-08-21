@@ -29,7 +29,7 @@
             >Projects</a
           >
         </li>
-        <li><a class="nav-link" href="#blog">Blog</a></li>
+        <li><a class="nav-link" href="{{ .Site.BaseURL }}">Blog</a></li>
         <li>
           <a
             class="nav-link"
@@ -73,7 +73,16 @@
       {{ end }}
       <p>{{ .Date | time.Format "2 January 2006" }}</p>
       <p>{{ printf "Estimated reading time: 🕑%d minutes" .ReadingTime }}</p>
-      {{ if .Params.featuredImage }} {{ end }}{{ .Content }}
+
+      <!-- Tags Section -->
+      <!-- Tags Section -->
+      {{ with .Params.tags }}
+      <p>
+        Tags: {{ range $index, $tag := . }}
+        <a href="{{ $.Site.BaseURL }}tags/{{ $tag | urlize }}">{{ $tag }}</a>{{
+        if lt $index (sub (len .) 1) }}, {{ end }} {{ end }}
+      </p>
+      {{ end }} {{ if .Params.featuredImage }} {{ end }}{{ .Content }}
     </article>
     <footer>
       <div style="text-align: center; margin-top: 20px">

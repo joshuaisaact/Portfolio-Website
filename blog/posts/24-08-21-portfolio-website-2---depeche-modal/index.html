@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head><script src="/Portfolio-Website/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=Portfolio-Website/blog/livereload" data-no-instant defer></script>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Depeche Modal</title>
-    <link rel="stylesheet" href="http://localhost:1313/Portfolio-Website/blog/css/style.css" />
-    <script src="http://localhost:1313/Portfolio-Website/blog/js/script.js" defer></script>
+    <link rel="stylesheet" href="https://joshuaisaact.github.io/Portfolio-Website/blog/css/style.css" />
+    <script src="https://joshuaisaact.github.io/Portfolio-Website/blog/js/script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,7 +29,7 @@
             >Projects</a
           >
         </li>
-        <li><a class="nav-link" href="http://localhost:1313/Portfolio-Website/blog/">Blog</a></li>
+        <li><a class="nav-link" href="https://joshuaisaact.github.io/Portfolio-Website/blog/">Blog</a></li>
         <li>
           <a
             class="nav-link"
@@ -41,14 +41,14 @@
           <a href="https://www.linkedin.com/in/joshuatuddenham/"
             ><img
               class="nav-img"
-              src="http://localhost:1313/Portfolio-Website/blog/media/nav/linkedin-original.svg"
+              src="https://joshuaisaact.github.io/Portfolio-Website/blog/media/nav/linkedin-original.svg"
           /></a>
         </li>
         <li>
           <a href="https://github.com/joshuaisaact"
             ><img
               class="nav-img"
-              src="http://localhost:1313/Portfolio-Website/blog/media/skills/github.svg"
+              src="https://joshuaisaact.github.io/Portfolio-Website/blog/media/skills/github.svg"
           /></a>
         </li>
       </ul>
@@ -77,9 +77,10 @@
       
       <p>
         Tags: 
-        <a href="http://localhost:1313/Portfolio-Website/blog/tags/javascript">Javascript</a>,  
-        <a href="http://localhost:1313/Portfolio-Website/blog/tags/css">CSS</a>,  
-        <a href="http://localhost:1313/Portfolio-Website/blog/tags/html">HTML</a>,  
+        <a href="https://joshuaisaact.github.io/Portfolio-Website/blog/tags/javascript">Javascript</a>,  
+        <a href="https://joshuaisaact.github.io/Portfolio-Website/blog/tags/css">CSS</a>,  
+        <a href="https://joshuaisaact.github.io/Portfolio-Website/blog/tags/html">HTML</a>,  
+        <a href="https://joshuaisaact.github.io/Portfolio-Website/blog/tags/portfolio-website">Portfolio Website</a>,  
       </p>
         <h1 id="depeche-modal">Depeche Modal</h1>
 <h3 id="let-me-see-you-stripped-down-to-the-bone">Let me see you stripped down to the bone.</h3>
@@ -109,28 +110,33 @@
 </li>
 </ol>
 <p>I did this with one long template literal, as i think thats the easiest to read:</p>
-<p>IMAGE OF GENERATOR FUNCTION</p>
-<p>After some testing with some dummy data, it worked! I am focusing on getting the front end working and hosted on github pages initially, building the actual db will come later.</p>
-<p>The next step was to build the modals that allow the visitor to see more information, and this, dear reader, is where disaster struck.</p>
-<p>Lets go through the desired behaviour, shall we?</p>
+<figure><img src="/Portfolio-Website/blog/posts/24-08-21-portfolio-website-2---depeche-modal/image-gen-func.png"><figcaption>
+      <h4>Next week on &#39;divs that got slightly out of hand&#39;</h4>
+    </figcaption>
+</figure>
+
+<p>My build process for the site is front-end first, so currently I&rsquo;m working on getting my initial template complete. That means that this function was going to be tested on a javascript array of objects, rather than a database - the idea was that with this functionality working, I could then point it at a database at a later date, and have it consume a JSON.</p>
+<h2 id="highway-to-hell">Highway to Hell</h2>
+<h5 id="isnt-that-the-wrong-band">Isn&rsquo;t that the wrong band?</h5>
+<p>The next step was to build the modals that allow the visitor to see more information, and this, dear reader, is where disaster struck.  Here was the desired behaviour:</p>
 <p>This is what i wanted to happen:</p>
 <ol>
 <li>
-<p>User clicks the read more link</p>
+<p>A window pops up on top of the rest of the page content, with a longer summary, additonal links, and a bigger image. A &lsquo;details page&rsquo;.</p>
 </li>
 <li>
-<p>A new window pops up on top of the rest of the page content, with a longer summary, additonal links, a bigger image etc</p>
+<p>The rest of the site behind the pop-up details page is both blurred and / or greyed out, so it doesnt distract from or interfere with the pop up.</p>
 </li>
 <li>
-<p>The background behind that image is both blurred and / or greyed out, so it doesnt distract from or interfere with the pop up.</p>
-</li>
-<li>
-<p>the user can then either click the X icon in the window (or hit esc on desktop) to close the modal.</p>
+<p>The user can then either click the close icon in the top right corner of the window (or hit the esc key on desktop) to close the modal.</p>
 </li>
 </ol>
-<p>Sounds relatively simple, doesnt it?</p>
-<p>Heres where the trouble began.</p>
-<p>IMAGE OF MODAL BLURRED</p>
+<p>Sounds relatively simple, doesnt it?  Welcome to my pain:</p>
+<figure><img src="/Portfolio-Website/blog/posts/24-08-21-portfolio-website-2---depeche-modal/modal%20hell.png"><figcaption>
+      <h4>Don&#39;t grab your glasses, that&#39;s just my modal sat on top of all my content</h4>
+    </figcaption>
+</figure>
+
 <p>Overlay to blur and dull background.</p>
 <p>Errors! Z index wont work.</p>
 <p>Moved into div, doesnt block enough of the page.</p>

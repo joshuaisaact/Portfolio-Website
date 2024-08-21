@@ -4,6 +4,7 @@ date = 2024-08-19T20:00:43+01:00
 draft = false
 featuredimage = "media/blog/driving-portfolio.png"
 summary = "My first ever article! My design philosophy for this portfolio."
+tags = ["HTML", "CSS", "Javascript"]
 +++
 
 ### <center>Design Philosophy</center>
