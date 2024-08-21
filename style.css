@@ -69,16 +69,16 @@ nav {
   padding: 0.75rem 1.5rem;
   border-radius: 5px;
   background-color: transparent;
-  color: black;
-  text-decoration: underline;
+  color: var(--color-primary);
+  /* text-decoration: underline; */
   text-decoration-color: var(--color-primary);
   text-underline-offset: 1px;
   text-transform: capitalize;
   cursor: pointer;
+  font-weight: 700;
   font-size: 1.2rem;
   border-width: 0;
   border: 2px solid var(--color-primary);
-
   font-weight: 500;
   transition: all 0.3s;
 }
@@ -229,6 +229,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   border-radius: 5px;
   /* border: 1px solid; */
   /* border-color: #3e7256; */

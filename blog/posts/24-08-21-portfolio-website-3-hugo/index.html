@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hugo with the flow</title>
+    <link rel="stylesheet" href="https://joshuaisaact.github.io/Portfolio-Website/blog/css/style.css" />
+    <script src="https://joshuaisaact.github.io/Portfolio-Website/blog/js/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <header>
+    <nav class="nav">
+      <a
+        class="nav-link"
+        href="https://joshuaisaact.github.io/Portfolio-Website/"
+        >Joshua Tuddenham</a
+      >
+      <ul class="nav-menu">
+        
+        <li>
+          <a
+            class="nav-link"
+            href="https://joshuaisaact.github.io/Portfolio-Website/#projects"
+            >Projects</a
+          >
+        </li>
+        <li><a class="nav-link" href="https://joshuaisaact.github.io/Portfolio-Website/blog/">Blog</a></li>
+        <li>
+          <a
+            class="nav-link"
+            href="https://joshuaisaact.github.io/Portfolio-Website/#contact"
+            >Contact</a
+          >
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/joshuatuddenham/"
+            ><img
+              class="nav-img"
+              src="https://joshuaisaact.github.io/Portfolio-Website/blog/media/nav/linkedin-original.svg"
+          /></a>
+        </li>
+        <li>
+          <a href="https://github.com/joshuaisaact"
+            ><img
+              class="nav-img"
+              src="https://joshuaisaact.github.io/Portfolio-Website/blog/media/skills/github.svg"
+          /></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <article>
+      <img
+        src="/Portfolio-Website/blog/media/blog/hugo%20flow/hugo-original-wordmark.svg"
+        alt="Featured image"
+        style="
+          max-height: 200px;
+          width: 100%;
+          border-radius: 8px;
+          object-fit: cover;
+          margin-top: 2rem;
+        "
+      />
+      <h1>Hugo with the flow</h1>
+      
+      <p>20 August 2024</p>
+      <p>Estimated reading time: 🕑7 minutes</p>
+
+      
+      
+      
+      <p>
+        Tags: 
+        <a href="https://joshuaisaact.github.io/Portfolio-Website/blog/tags/hugo">Hugo</a>,  
+        <a href="https://joshuaisaact.github.io/Portfolio-Website/blog/tags/javascript">Javascript</a>,  
+        <a href="https://joshuaisaact.github.io/Portfolio-Website/blog/tags/css">CSS</a> 
+        <a href="https://joshuaisaact.github.io/Portfolio-Website/blog/tags/html">HTML</a> 
+      </p>
+        <h3 id="effortless-website-building">Effortless website building</h3>
+<p>Problem space - lots of sites, hard to maintain across multiple skins, didnt want to spend ages routing, wanted tags.</p>
+<p>When it came time to build the blog part of my site, I was faced with a few requirements that needed some careful thought. The first of which was how i was going to handle lots of continuously evolving blog posts, over multiple themes that may end up being mirrored on duplicate sites.</p>
+<p>I initially considered an SPA approach, however i realised this would soon become cumbersome using vanilla JS, and would make for a very bloated html file.</p>
+<p>Given that, I decided to go with an MPA approach. I also wanted features like tagging, inter-page routing, but most importantly, i wanted the ability to write blogposts in Markdown files, which could then be uploaded as websites.  Enter the Static Page Generator!</p>
+<figure><img src="/Portfolio-Website/blog/posts/24-08-21-portfolio-website-3-hugo/jackie-chan.jpg"><figcaption>
+      <h4>Why didn&#39;t I switch to a static site generator sooner?!</h4>
+    </figcaption>
+</figure>
+
+<p>After doing some research I landed on Hugo, which is written in Go and is (supposedly) blisteringly fast, and well-supported in terms of templates and docs, and will automatically build a static blog site from a folder full of markdown files (and some html/css/js templates).</p>
+<p>Here&rsquo;s how it went.</p>
+<p>Firstly, I had to use homebrew to install Hugo.</p>
+<pre tabindex="0"><code>brew install hugo
+</code></pre><p>Once installed, I started a new Hugo site with the command:</p>
+<pre tabindex="0"><code>$ hugo new site site_name
+</code></pre><p>This was painless, and set me up with a skeleton of folders that would be used to build the blog microsite.</p>
+<p>PICTURE OF FOLDERS</p>
+<p>This folder structure is the skeleton of an entire static website:</p>
+<p><strong>Archetypes:</strong></p>
+<p>Content templates that come with pre-set frontmatter variables. You can customize these templates or create your own to suit your needs. For instance, if you want a template specifically for blog posts, you&rsquo;d create a file named <code>posts.md</code> in the <code>archetypes</code> folder. Hugo will then automatically apply the variables from this file whenever you generate a new post.</p>
+<p>By default, they come with &rsquo;title&rsquo;, &lsquo;date&rsquo;, and &lsquo;draft&rsquo;. This ensures that every new post includes these essential fields.</p>
+<p>To use this post template, I simply run the command:</p>
+<pre tabindex="0"><code>$ hugo new posts/new-post.md
+</code></pre><p>This creates a new blank post in the content/posts directory with the frontmatter values pre-populated.</p>
+<p><strong>Content</strong>:</p>
+<p>This directory is where all the website&rsquo;s content is stored. You can organize it with subfolders that represent different sections of your site. For instance, if your site includes a blog, you could create a &ldquo;blog&rdquo; folder to hold all the articles for that section.</p>
+<p><strong>Data:</strong></p>
+<p>I haven&rsquo;t used this (yet), but you can populate it with JSON and other data files from external sources, and then pull that data into your Hugo static sites.</p>
+<p><strong>Layout:</strong></p>
+<p>Perhaps one of the most important folders, this contains all the HTML template files used for pages on your Hugo site. For example, single.html is the template for every blog post, and baseof.html is the base template that&rsquo;s used across all your sites.</p>
+<p><strong>Static</strong>:</p>
+<p>The static directory is quite simple—it holds the static assets for your website, like CSS, JavaScript, and images. The contents of this directory are served exactly as they are, without any modifications by Hugo.</p>
+<p><strong>Config.toml</strong>:</p>
+<p>The basic configuration file for any Hugo project. It can also be created as a JSON or YAML if you prefer, but the concept remains the same. There is a wide variety of directives that ship with Hugo which can be used that will enable you to fine tune your environment. Most projects will have a single config file which will reside inside the root of the project but for larger projects you can create a config directory which could contain multiple config files for various purposes or environments such as staging and production.</p>
+<p>Hugo creates two additional directories after you&rsquo;ve built your project for the first time:</p>
+<p><strong>Resources:</strong></p>
+<p>A cache of images and css files, to help your site load faster.</p>
+<p><strong>Public:</strong></p>
+<p>All of the public-facing files Hugo generates - the production folder you&rsquo;d use in order to launch your project on the internet.</p>
+<p><strong>Additional setup:</strong></p>
+<p>I knew I wanted to integrate my Hugo outputs with an existing site, and so I needed to have a continuously updating JSON output of all of my blog posts. Luckily, Hugo offers this, and I added this to my config.toml file:</p>
+<pre tabindex="0"><code>[outputs]
+  home = [&#34;HTML&#34;, &#34;JSON&#34;]
+  section = [&#34;HTML&#34;, &#34;JSON&#34;]
+  taxonomy = [&#34;HTML&#34;, &#34;JSON&#34;]
+  taxonomyTerm = [&#34;HTML&#34;, &#34;JSON&#34;]
+</code></pre><p>My use case for Hugo was atypical - its most commonly used to launch an entire website, rather than a subset of an existing website. But it worked well.</p>
+<p>I started out by building the empty template files - Hugo has a bunch of off the shelf themes, but given my main site was already built, i instead had to copy across the CSS and the existing header and footer html.</p>
+<p>This gave me empty pages that shared the nav bar and footer from my existing site</p>
+<figure><img src="/Portfolio-Website/blog/posts/24-08-21-portfolio-website-3-hugo/blank-page.png"><figcaption>
+      <h4>Really need to centre that footer div</h4>
+    </figcaption>
+</figure>
+
+<p>The next step was to test it with some markdown files. I had a few blog posts prewritten on my phone. I try and write them on the tube as its a good distraction from the sauna that is the Victoria line.</p>
+<figure><img src="/Portfolio-Website/blog/posts/24-08-21-portfolio-website-3-hugo/hell.jpg"><figcaption>
+      <h4>An artist&#39;s rendition of an average commute on the Victoria line in summer</h4>
+    </figcaption>
+</figure>
+
+<p>It worked perfectly - I can now just either deposit a premade markdown file in my content/posts directory, or use the terminal to create a blank once, fill it with content, and then run a single command to have it converted into blog post (typically in less than 20ms).</p>
+<p>It did take me a little while to figure out the best way to handle embedded images. Hugo has lots of different options for handling them, but a few of them are cumbersome and require writing long relative file paths. The best way to set up your blog images (in my humble experience) is to create a folder for each blog post - if you do this, you can put any embedded images directly in there, and then reference them directly with no file paths (just <code>src=&quot;example.jpg&quot;</code>)</p>
+<h3 id="integration-station">Integration station</h3>
+<p>The next step was integrating it with my existing site, which I was nervous about as I&rsquo;m not exactly using Hugo exactly how it was designed - it&rsquo;s designed to be an entire static website generator. Given my main portfolio website is a single page, I figured there were several ways I could tackle this. I didn&rsquo;t want to just have it sat behind a link in a nav bar &ndash; I wanted to surface articles on the existing static page. Step in our old friend, the JSON.</p>
+<figure><img src="/Portfolio-Website/blog/posts/24-08-21-portfolio-website-3-hugo/json.png"><figcaption>
+      <h4>If you&#39;re still reading here, then it&#39;s not even worth me apologising for this image is it?</h4>
+    </figcaption>
+</figure>
+
+<p>Hugo has a JSON export function &ndash; you can use it to set up a templated JSON export that automatically runs every time your Hugo site compiles. This includes an array of blog posts, with lots of helpful fields surfaced. Here&rsquo;s how I set up my JSON template:</p>
+<figure><img src="/Portfolio-Website/blog/posts/24-08-21-portfolio-website-3-hugo/json%20template.png"><figcaption>
+      <h4>Not that I&#39;m an expert, I&#39;m sure you can make a more useful one, but this worked for me</h4>
+    </figcaption>
+</figure>
+
+<p>With this JSON, I could then enlist the help of a very dear, very old friend &ndash; the IIFE div generator function! Using this, I can automatically create a grid on my main static site, automatically populated with my most recent blog articles.</p>
+<figure><img src="/Portfolio-Website/blog/media/blog/depeche%20modal/allthedivs.png"><figcaption>
+      <h4>Any excuse to post this image again</h4>
+    </figcaption>
+</figure>
+
+<p>Here&rsquo;s how I structured my function:</p>
+<figure><img src="/Portfolio-Website/blog/posts/24-08-21-portfolio-website-3-hugo/generator%20function.png"><figcaption>
+      <h4>Probably already changed by the time you read this</h4>
+    </figcaption>
+</figure>
+
+<p>And with that, I had Hugo set up and ready to roll! There were a few other fiddly bits to sort, like taxonomy, tagging, and local/production variables, but I&rsquo;ll save those enthralling tales for another day.</p>
+<p>In summary - Hugo is great, I couldn&rsquo;t recommend it more as a static site generator that automates lots of the tedious parts of managing a website - the routing, page generation, and copy/pasting of page after page, and let&rsquo;s you focus on what&rsquo;s most important &ndash; writing dumb blog posts and making sick skins.</p>
+
+    </article>
+    <footer>
+      <div style="text-align: center; margin-top: 20px">
+        <a href="#" id="return-to-top" class="btn">Return to Top</a>
+      </div>
+      <br />
+      <p>© 2024 Joshua Tuddenham</p>
+    </footer>
+  </body>
+</html>

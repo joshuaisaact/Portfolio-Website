@@ -6,8 +6,8 @@
   "description": "<no value>",
   "items": [
     {
-      "id": "/Portfolio-Website/blog/posts/portfolio-website-part-3/",
-      "url": "/Portfolio-Website/blog/posts/portfolio-website-part-3/",
+      "id": "/Portfolio-Website/blog/posts/24-08-21-portfolio-website-3-hugo/",
+      "url": "/Portfolio-Website/blog/posts/24-08-21-portfolio-website-3-hugo/",
       "title": "Hugo with the flow",
       "content_text": "How I used Hugo to automate my blog static site generation, and how to set up Hugo with an existing website",
       "summary": "How I used Hugo to automate my blog static site generation, and how to set up Hugo with an existing website",
@@ -37,3 +37,5 @@
     }
   ]
 }
+
+

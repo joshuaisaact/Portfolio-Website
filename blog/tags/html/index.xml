@@ -10,9 +10,9 @@
     <atom:link href="https://joshuaisaact.github.io/Portfolio-Website/blog/tags/html/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo with the flow</title>
-      <link>https://joshuaisaact.github.io/Portfolio-Website/blog/posts/portfolio-website-part-3/</link>
+      <link>https://joshuaisaact.github.io/Portfolio-Website/blog/posts/24-08-21-portfolio-website-3-hugo/</link>
       <pubDate>Tue, 20 Aug 2024 06:00:24 +0100</pubDate>
-      <guid>https://joshuaisaact.github.io/Portfolio-Website/blog/posts/portfolio-website-part-3/</guid>
+      <guid>https://joshuaisaact.github.io/Portfolio-Website/blog/posts/24-08-21-portfolio-website-3-hugo/</guid>
       <description>How I used Hugo to automate my blog static site generation, and how to set up Hugo with an existing website</description>
     </item>
     <item>
