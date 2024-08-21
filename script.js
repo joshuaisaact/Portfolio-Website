@@ -257,13 +257,17 @@ document.querySelector('.nav-menu').addEventListener('click', function (e) {
 
 // Return to top
 
-document.getElementById('return-to-top').addEventListener('click', function (e) {
+function scrollToTop(e) {
   e.preventDefault();
   window.scrollTo({
     top: 0,
     behavior: 'smooth'
   });
-});
+}
+
+document.getElementById('return-to-top').addEventListener('click', scrollToTop);
+document.getElementById('home-return').addEventListener('click', scrollToTop);
+
 
 // Nav bar - fade on hover
 
