@@ -445,11 +445,13 @@ form textarea {
     padding: 5rem 0;
   }
 
-  .project-grid {
+  .project-grid,
+  .blog-grid {
     display: flex;
     flex-direction: column;
     margin: auto;
   }
+
   .project-modal {
     max-width: none;
   }
