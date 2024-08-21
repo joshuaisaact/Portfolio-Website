@@ -112,6 +112,10 @@ nav {
   box-shadow: 0 0 0 3px rgba(62, 114, 86, 0.4);
 }
 
+figure img {
+  max-width: 800px;
+}
+
 .nav-menu {
   padding-right: 10rem;
 }
