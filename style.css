@@ -30,6 +30,7 @@ h2 {
   text-decoration-color: var(--color-primary);
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
+  text-align: center;
 }
 
 h3 {
@@ -193,6 +194,7 @@ nav ul {
   display: flex;
   gap: 5%;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .skills-icon {
