@@ -35,7 +35,7 @@ $ hugo new site site_name
 
 This was painless, and set me up with a skeleton of folders that would be used to build the blog microsite.
 
-PICTURE OF FOLDERS  
+{{< figure src="folders.png" title="An empty shell, full of potential (or procrastination).">}}
 
 This folder structure is the skeleton of an entire static website:
 

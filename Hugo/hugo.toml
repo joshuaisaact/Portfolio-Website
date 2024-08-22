@@ -1,7 +1,6 @@
 baseURL = 'https://joshuaisaact.github.io/Portfolio-Website/blog'
 languageCode = 'en-gb'
 title = 'Josh Development Blog'
-theme = ""
 publishDir = "../blog"
 
 [params]
