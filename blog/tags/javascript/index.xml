@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Javascript on Josh Development Blog</title>
-    <link>http://localhost:1313/Portfolio-Website/blog/tags/javascript/</link>
+    <link>https://joshuaisaact.github.io/Portfolio-Website/blog/tags/javascript/</link>
     <description>Recent content in Javascript on Josh Development Blog</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
     <lastBuildDate>Tue, 20 Aug 2024 06:00:24 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/Portfolio-Website/blog/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://joshuaisaact.github.io/Portfolio-Website/blog/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo with the flow</title>
-      <link>http://localhost:1313/Portfolio-Website/blog/posts/24-08-21-portfolio-website-3-hugo/</link>
+      <link>https://joshuaisaact.github.io/Portfolio-Website/blog/posts/24-08-21-portfolio-website-3-hugo/</link>
       <pubDate>Tue, 20 Aug 2024 06:00:24 +0100</pubDate>
-      <guid>http://localhost:1313/Portfolio-Website/blog/posts/24-08-21-portfolio-website-3-hugo/</guid>
+      <guid>https://joshuaisaact.github.io/Portfolio-Website/blog/posts/24-08-21-portfolio-website-3-hugo/</guid>
       <description>How I used Hugo to automate my blog static site generation, and how to set up Hugo with an existing website</description>
     </item>
     <item>
       <title>Depeche Modal</title>
-      <link>http://localhost:1313/Portfolio-Website/blog/posts/24-08-21-portfolio-website-2---depeche-modal/</link>
+      <link>https://joshuaisaact.github.io/Portfolio-Website/blog/posts/24-08-21-portfolio-website-2---depeche-modal/</link>
       <pubDate>Mon, 19 Aug 2024 21:16:22 +0100</pubDate>
-      <guid>http://localhost:1313/Portfolio-Website/blog/posts/24-08-21-portfolio-website-2---depeche-modal/</guid>
+      <guid>https://joshuaisaact.github.io/Portfolio-Website/blog/posts/24-08-21-portfolio-website-2---depeche-modal/</guid>
       <description>Project cards, modals, and how much a rogue Z index can send one man spiralling into a pit of dispair</description>
     </item>
     <item>
       <title>Dancing in the Dark (Designing A Portfolio Site)</title>
-      <link>http://localhost:1313/Portfolio-Website/blog/posts/24-08-21-portfolio-website-1-on-design/</link>
+      <link>https://joshuaisaact.github.io/Portfolio-Website/blog/posts/24-08-21-portfolio-website-1-on-design/</link>
       <pubDate>Mon, 19 Aug 2024 20:00:43 +0100</pubDate>
-      <guid>http://localhost:1313/Portfolio-Website/blog/posts/24-08-21-portfolio-website-1-on-design/</guid>
+      <guid>https://joshuaisaact.github.io/Portfolio-Website/blog/posts/24-08-21-portfolio-website-1-on-design/</guid>
       <description>My first ever article! My design philosophy for this portfolio.</description>
     </item>
   </channel>
