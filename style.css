@@ -401,6 +401,7 @@ form label {
 }
 
 form input[type="text"],
+form input[type="email"],
 form textarea {
   border: 2px solid;
   border-color: var(--color-primary);
