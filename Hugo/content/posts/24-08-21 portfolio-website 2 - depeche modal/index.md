@@ -84,3 +84,5 @@ We need to use a counter within the event handler!
 Here is the revised function:  
 
 Fix event handler.
+
+---

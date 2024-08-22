@@ -136,3 +136,5 @@ Here's how I structured my function:
 And with that, I had Hugo set up and ready to roll! There were a few other fiddly bits to sort, like taxonomy, tagging, and local/production variables, but I'll save those enthralling tales for another day.
 
 In summary - Hugo is great, I couldn't recommend it more as a static site generator that automates lots of the tedious parts of managing a website - the routing, page generation, and copy/pasting of page after page, and let's you focus on what's most important -- writing dumb blog posts and making sick skins.
+
+---

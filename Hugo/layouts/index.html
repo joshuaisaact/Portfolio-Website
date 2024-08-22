@@ -1,17 +1,28 @@
 {{ define "main" }}
 <section>
-  <h1>Blog Posts</h1>
   <div class="blog-grid">
     {{ range .Site.RegularPages }} {{ if eq .Section "posts" }}
     <div class="blog-item">
       <a href="{{ .Permalink }}">
-        {{ with .Params.image }}
+        {{ with .Params.featuredImage }}
         <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="blog-image" />
         {{ end }}
         <h2>{{ .Title }}</h2>
       </a>
+      {{ with .Params.tags }}
+      <p class="tags">
+        {{ range $index, $tag := . }}
+        <a href="{{ $.Site.BaseURL }}tags/{{ $tag | urlize }}">{{ $tag }}</a>{{
+        if lt $index (sub (len .) 1) }} {{ end }} {{ end }}
+      </p>
+      {{ end }}
       <p class="blog-overview">{{ .Summary }}</p>
-      <p><small>Posted on {{ .Date.Format "Jan 2, 2006" }}</small></p>
+      <p>
+        <small
+          >Posted on {{ .Date.Format "Jan 2, 2006" }} | 🕑 {{ .ReadingTime }}
+          min read</small
+        >
+      </p>
     </div>
     {{ end }} {{ end }}
   </div>

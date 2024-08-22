@@ -1,8 +1,8 @@
 {
   "version": "https://jsonfeed.org/version/1",
   "title": "Josh Development Blog",
-  "home_page_url": "https://joshuaisaact.github.io/Portfolio-Website/blog/",
-  "feed_url": "https://joshuaisaact.github.io/Portfolio-Website/blog/index.json",
+  "home_page_url": "http://localhost:1313/Portfolio-Website/blog/",
+  "feed_url": "http://localhost:1313/Portfolio-Website/blog/index.json",
   "description": "<no value>",
   "items": [
     {
@@ -26,8 +26,8 @@
       "date_modified": "19 August 2024"
     },
     {
-      "id": "/Portfolio-Website/blog/posts/portfolio-website-part-1/",
-      "url": "/Portfolio-Website/blog/posts/portfolio-website-part-1/",
+      "id": "/Portfolio-Website/blog/posts/24-08-21-portfolio-website-1-on-design/",
+      "url": "/Portfolio-Website/blog/posts/24-08-21-portfolio-website-1-on-design/",
       "title": "Dancing in the Dark (Designing A Portfolio Site)",
       "content_text": "My first ever article! My design philosophy for this portfolio.",
       "summary": "My first ever article! My design philosophy for this portfolio.",
