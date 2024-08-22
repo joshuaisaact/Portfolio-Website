@@ -50,6 +50,12 @@ h3 {
   z-index: 3000;
 }
 
+.honeypot-field {
+  position: absolute;
+  left: -9999px;
+  visibility: hidden;
+}
+
 nav {
   display: flex;
   justify-content: space-between;

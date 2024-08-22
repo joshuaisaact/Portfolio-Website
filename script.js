@@ -89,6 +89,17 @@ const projects = [
 
 ]
 
+// Public Email API key
+
+
+// (function () {
+//   // https://dashboard.emailjs.com/admin/account
+//   emailjs.init({
+//     publicKey: "SpmiJWx5PG3Rgx6hk",
+//   });
+// })();
+
+
 // Skills list image generator function (with animated fade in)
 
 function generateSkillImages() {
@@ -239,6 +250,8 @@ loadBlogPosts();
 
 // Event listeners
 
+
+
 // Nav bar shortcuts - smooth scrolling
 
 document.querySelector('.nav-menu').addEventListener('click', function (e) {
@@ -362,4 +375,30 @@ profileImg.addEventListener('click', function (e) {
 profileImg.onanimationend = () => {
   profileImg.classList.remove("start-bouncing");
   document.querySelector(".splash-name").classList.remove("start-bouncing")
+}
+
+// Email contact form
+
+window.onload = function () {
+  emailjs.init('SpmiJWx5PG3Rgx6hk');
+  document.getElementById('contact-form').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    // Honeypot detection
+    const honeypot = document.getElementById('honeypot').value;
+    if (honeypot) {
+      console.log('Spam detected - honeypot field filled.');
+      return; // Stop form submission if honeypot is filled
+    }
+
+    try {
+      const result = await emailjs.sendForm('service_wrl8bbi', 'template_qw6p9z5', this);
+      console.log('SUCCESS!', result);
+
+      this.reset();
+
+    } catch (error) {
+      console.log('FAILED...', error);
+    }
+  });
 }
