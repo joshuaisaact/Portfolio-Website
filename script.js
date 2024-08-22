@@ -209,9 +209,8 @@ async function loadBlogPosts() {
     console.log(data);
     data.items.forEach(item => {
       const postElement = document.createElement('div');
-
+      postElement.classList.add('blog-card')
       postElement.innerHTML = `
-      <div class="blog-card">
             <img
               src="${item.featured_image}"
               class="blog-image"
@@ -224,7 +223,6 @@ async function loadBlogPosts() {
               ${item.content_text}
             </p>
             <a href="${item.url}" class="btn dark">read</a>
-          </div>
       `;
 
       blogList.appendChild(postElement);
