@@ -361,6 +361,19 @@ footer {
   line-height: 30px;
 }
 
+.blog-card {
+  a {
+    max-width: fit-content;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.blog-card-overview {
+  margin: 1rem;
+}
+
 /* .btn.dark {
   border: 2px solid;
   border-color: #3e7256;

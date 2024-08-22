@@ -220,7 +220,7 @@ async function loadBlogPosts() {
               width="380"
             />
             <h1 class="blog-title">${item.title}</h1>
-            <p class="blog-overview">
+            <p class="blog-card-overview">
               ${item.content_text}
             </p>
             <a href="${item.url}" class="btn dark">read</a>
