@@ -9,7 +9,7 @@ tags = ["Hugo", "Javascript", "CSS", "HTML"]
 
 ### Effortless website building
 
-Problem space - lots of sites, hard to maintain across multiple skins, didnt want to spend ages routing, wanted tags.  
+
 
 When it came time to build the blog part of my site, I was faced with a few requirements that needed some careful thought. The first of which was how i was going to handle lots of continuously evolving blog posts, over multiple themes that may end up being mirrored on duplicate sites.  
 
