@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Portfolio Website on Josh Development Blog</title>
-    <link>http://localhost:1313/Portfolio-Website/blog/tags/portfolio-website/</link>
+    <link>https://joshuaisaact.github.io/Portfolio-Website/blog/tags/portfolio-website/</link>
     <description>Recent content in Portfolio Website on Josh Development Blog</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
     <lastBuildDate>Mon, 19 Aug 2024 21:16:22 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/Portfolio-Website/blog/tags/portfolio-website/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://joshuaisaact.github.io/Portfolio-Website/blog/tags/portfolio-website/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Depeche Modal</title>
-      <link>http://localhost:1313/Portfolio-Website/blog/posts/24-08-21-portfolio-website-2---depeche-modal/</link>
+      <link>https://joshuaisaact.github.io/Portfolio-Website/blog/posts/24-08-21-portfolio-website-2---depeche-modal/</link>
       <pubDate>Mon, 19 Aug 2024 21:16:22 +0100</pubDate>
-      <guid>http://localhost:1313/Portfolio-Website/blog/posts/24-08-21-portfolio-website-2---depeche-modal/</guid>
+      <guid>https://joshuaisaact.github.io/Portfolio-Website/blog/posts/24-08-21-portfolio-website-2---depeche-modal/</guid>
       <description>Project cards, modals, and how much a rogue Z index can send one man spiralling into a pit of dispair</description>
     </item>
   </channel>
