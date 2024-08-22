@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section>
+  <h1>Blog Posts</h1>
+  <div class="blog-grid">
+    {{ range .Site.RegularPages }} {{ if eq .Section "posts" }}
+    <div class="blog-item">
+      <a href="{{ .Permalink }}">
+        {{ with .Params.image }}
+        <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="blog-image" />
+        {{ end }}
+        <h2>{{ .Title }}</h2>
+      </a>
+      <p class="blog-overview">{{ .Summary }}</p>
+      <p><small>Posted on {{ .Date.Format "Jan 2, 2006" }}</small></p>
+    </div>
+    {{ end }} {{ end }}
+  </div>
+</section>
+{{ end }}
