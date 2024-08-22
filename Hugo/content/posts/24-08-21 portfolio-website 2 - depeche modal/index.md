@@ -57,12 +57,30 @@ Sounds relatively simple, doesnt it?  Welcome to my pain:
 
 {{< figure src="modal hell.png" title="Don't grab your glasses, that's just my modal sat on top of all my content">}}
 
-Overlay to blur and dull background.  
+The overlay is sitting on top of the modal pop up window! The first port of call was to revisit that div generator function shall we, to see if there's anything that can be done in there.  
 
-Errors! Z index wont work.  
+So it looks like the div generates a initially hidden modal window, and when the visitor clicks the button it appears. At the same time, the class of the modal function also changes. So why is the overlay sitting on top of the modal?  
 
-Moved into div, doesnt block enough of the page.  
+I first tried changing the z-indexes of both elements. Let's give the overlay a z-index of 1, and the modal detail window a comically high z -index of 9999.  
 
-Generator function global object  
+The issue isnt fixed! But why?! Well, if we look at the MDN docs for the z-index CSS property:  
+
+MDN QUOTE PARENT CHILD  
+
+In summary, because the overlay is at the global level of the DOM, and not sharing the same parent as the modal detail window, the z-index isnt doing a thing!  
+
+Well, I guess we should just move the overlay into the same projects-grid as the modal detail window, right? Easy issue, easy fix:  
+
+IMAGE OF HOW THE BLOG ISNT BLURRED  
+
+We have introduced a new bug! We can now see the modal detail window, but the sibling sections are no longer blurred. Not only does this look a bit rubbish, but on some wider displays the unblurred elements interfere with the modal window's readability.  
+
+The solution? After another 30 minutes of testing, it seemed the solution was that both the modal detail window and the overlay need to sit at the global level of the DOM. But this introduces another bug!  
+
+Given we are using the this context binding variable in the javascript function, if when we programmatically create our divs we create all the modal windows at the global level, how will the website know which button refers to which modal detail window?  
+
+We need to use a counter within the event handler!  
+
+Here is the revised function:  
 
 Fix event handler.

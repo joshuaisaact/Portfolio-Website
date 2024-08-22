@@ -1,5 +1,5 @@
 +++
-title = 'On Portfolio Website Design'
+title = "Dancing in the Dark (Designing A Portfolio Site)"
 date = 2024-08-19T20:00:43+01:00
 draft = false
 featuredimage = "media/blog/driving-portfolio.png"
@@ -11,27 +11,41 @@ tags = ["HTML", "CSS", "Javascript"]
 
 As I dive into building my portfolio website, I’m torn between two extremes. On one hand, I've come across some truly impressive portfolio sites that, while visually stunning, demand too much from their visitors. Take, for instance, a 16-bit SNES RPG-style portfolio I found, where visitors had to maneuver a character just to access sections like "About" or "Projects." Cool? Definitely. Practical? Not so much. I think any prospective visitor should be able to get to the meat and bones of the content within 5-10 seconds of visiting your page. Nobody has time to play a game to read someone's career history, as impressive as that initially seems.
 
-{{< figure src="/Portfolio-Website/blog/media/blog/driving-portfolio.png" alt="gaming portfolio" caption="It does look pretty cool though, I'll give them that" width="80%" >}}  
+{{< figure src="/Portfolio-Website/blog/media/blog/driving-portfolio.png" alt="gaming portfolio" title="It does look pretty cool though, I'll give them that" >}}  
 
 On the other end of the spectrum, some portfolios were essentially glorified online CVs, stripped of any real personality or creativity. They get the job done but fail to leave a lasting impression.
 
-So, where does that leave me? I want to strike a balance—creating a site that’s lightweight, skimmable, and easy to navigate but still bursting with personality. My vision for version one is a microsite that’s simple to explore yet comes alive with wild, esoteric themes and skins that users can select themselves.
+So, where does that leave me? I want to strike a balance—creating a site that’s lightweight, skimmable, and easy to navigate but still bursting with personality. My vision for version one is a microsite that’s simple to explore yet comes alive with wild, esoteric themes and themes that users can select themselves.
 
 ### Tackling the Challenges
 
-Of course, this approach brings some challenges:
+Here are some hurdles that I'll need to overcome:  
 
-1. **Bandwidth Management**: Loading all the skins upfront isn’t practical, but then how do I manage their loading without bogging down the user experience? I’m thinking some clever lazy loading might do the trick.
+1. **How does the user switch themes?** Does the whole page reload? Is each theme a separate site?  
+2. **What features do I want and need?** What is the intial site layout?
+3. **How do I make it responsive?**
+4. **How many themes are a good initial number?** Five?
+5. **How will people know that the themes exist?**
+6. **How do I ensure the blog will support all these themes?** If I eventually end up with twenty themes, I do not want to manually test them all across every page of my blog.  
 
-2. **Skin Application**: Implementing multiple skins means more than just a dark mode toggle. I’ll need several CSS files and a way to inject them dynamically into the DOM using JavaScript. Reverse-engineering dark mode logic could be a good starting point.
+In order to manage this project (and add some structure to my scattered thinking), I decided to create a Trello board, with each of these questions, so I could ensure that I processed each of them one by one, and made sure I thought about them properly.  
 
-3. **Initial Design**: I’ll sketch out the initial design in Figma, focusing on a clean, adaptable layout that can work with multiple themes.
+Here is my Trello:  
 
-4. **Responsive Design**: The site must handle different display types seamlessly, regardless of the chosen skin. That means a lot of testing and tweaking across devices.
+In the spirit of transparency, let's go through the first one together.  
 
-5. **Art and Skin Creation**: I’ll start with five distinct skins to give users a taste of the variety. These can be expanded over time as I refine the site.
+### How does the user switch skins?
 
-6. **User Prompting**: One big question remains—how do I make sure visitors know about the skin options? I’ll need some intuitive prompts or hints to encourage exploration.
+Bear in mind, for version 1 of my portfolio site I wanted to use a very plain tech stack, ideally with no frontend frameworks, so any native solutions they may have were ruled out.  
+
+After thinking about it for some time, I figured that I essentially had two options:  
+
+A single site, with multiple style sheets  
+
+This implementation would mean that all the different themes were loaded on initial page load, and as a user clicked change theme, it would trigger an event listener that would change the current active style sheets..  
+
+Pros  
+Cons
 
 ### Initial Skin Ideas
 
