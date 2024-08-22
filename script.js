@@ -89,17 +89,6 @@ const projects = [
 
 ]
 
-// Public Email API key
-
-
-// (function () {
-//   // https://dashboard.emailjs.com/admin/account
-//   emailjs.init({
-//     publicKey: "SpmiJWx5PG3Rgx6hk",
-//   });
-// })();
-
-
 // Skills list image generator function (with animated fade in)
 
 function generateSkillImages() {
