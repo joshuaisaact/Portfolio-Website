@@ -78,9 +78,9 @@
       <!-- Tags Section -->
       {{ with .Params.tags }}
       <p>
-        Tags: {{ range $index, $tag := . }}
+        {{ range $index, $tag := . }}
         <a href="{{ $.Site.BaseURL }}tags/{{ $tag | urlize }}">{{ $tag }}</a>{{
-        if lt $index (sub (len .) 1) }}, {{ end }} {{ end }}
+        if lt $index (sub (len .) 1) }}{{ " " }}{{ end }} {{ end }}
       </p>
       {{ end }} {{ if .Params.featuredImage }} {{ end }}{{ .Content }}
     </article>

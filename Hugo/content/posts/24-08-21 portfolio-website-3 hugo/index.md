@@ -9,8 +9,6 @@ tags = ["Hugo", "Javascript", "CSS", "HTML"]
 
 ### Effortless website building
 
-
-
 When it came time to build the blog part of my site, I was faced with a few requirements that needed some careful thought. The first of which was how i was going to handle lots of continuously evolving blog posts, over multiple themes that may end up being mirrored on duplicate sites.  
 
 I initially considered an SPA approach, however i realised this would soon become cumbersome using vanilla JS, and would make for a very bloated html file.  
@@ -43,7 +41,7 @@ This folder structure is the skeleton of an entire static website:
 
 **Archetypes:**
 
-Content templates that come with pre-set frontmatter variables. You can customize these templates or create your own to suit your needs. For instance, if you want a template specifically for blog posts, you'd create a file named `posts.md` in the `archetypes` folder. Hugo will then automatically apply the variables from this file whenever you generate a new post.
+Content templates that come with pre-set frontmatter variables. You can customize these templates or create your own to suit your needs. For instance, if you want a template specifically for blog posts, you'd create a file named "posts.md" in the "archetypes" folder. Hugo will then automatically apply the variables from this file whenever you generate a new post.
 
 By default, they come with 'title', 'date', and 'draft'. This ensures that every new post includes these essential fields.
 
@@ -111,7 +109,11 @@ The next step was to test it with some markdown files. I had a few blog posts pr
 
 It worked perfectly - I can now just either deposit a premade markdown file in my content/posts directory, or use the terminal to create a blank once, fill it with content, and then run a single command to have it converted into blog post (typically in less than 20ms).
 
-It did take me a little while to figure out the best way to handle embedded images. Hugo has lots of different options for handling them, but a few of them are cumbersome and require writing long relative file paths. The best way to set up your blog images (in my humble experience) is to create a folder for each blog post - if you do this, you can put any embedded images directly in there, and then reference them directly with no file paths (just `src="example.jpg"`)
+It did take me a little while to figure out the best way to handle embedded images. Hugo has lots of different options for handling them, but a few of them are cumbersome and require writing long relative file paths. The best way to set up your blog images (in my humble experience) is to create a folder for each blog post - if you do this, you can put any embedded images directly in there, and then reference them directly with no file paths:
+
+```
+< figure src="example.jpg" title="Some kind of pithy comment here">
+```
 
 ### Integration station
 

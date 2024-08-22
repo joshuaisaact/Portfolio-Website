@@ -76,9 +76,9 @@
       
       
       <p>
-        Tags: 
-        <a href="http://localhost:1313/Portfolio-Website/blog/tags/hugo">Hugo</a>,  
-        <a href="http://localhost:1313/Portfolio-Website/blog/tags/javascript">Javascript</a>,  
+        
+        <a href="http://localhost:1313/Portfolio-Website/blog/tags/hugo">Hugo</a>  
+        <a href="http://localhost:1313/Portfolio-Website/blog/tags/javascript">Javascript</a>  
         <a href="http://localhost:1313/Portfolio-Website/blog/tags/css">CSS</a> 
         <a href="http://localhost:1313/Portfolio-Website/blog/tags/html">HTML</a> 
       </p>
@@ -101,7 +101,7 @@
 <p>PICTURE OF FOLDERS</p>
 <p>This folder structure is the skeleton of an entire static website:</p>
 <p><strong>Archetypes:</strong></p>
-<p>Content templates that come with pre-set frontmatter variables. You can customize these templates or create your own to suit your needs. For instance, if you want a template specifically for blog posts, you&rsquo;d create a file named <code>posts.md</code> in the <code>archetypes</code> folder. Hugo will then automatically apply the variables from this file whenever you generate a new post.</p>
+<p>Content templates that come with pre-set frontmatter variables. You can customize these templates or create your own to suit your needs. For instance, if you want a template specifically for blog posts, you&rsquo;d create a file named &ldquo;posts.md&rdquo; in the &ldquo;archetypes&rdquo; folder. Hugo will then automatically apply the variables from this file whenever you generate a new post.</p>
 <p>By default, they come with &rsquo;title&rsquo;, &lsquo;date&rsquo;, and &lsquo;draft&rsquo;. This ensures that every new post includes these essential fields.</p>
 <p>To use this post template, I simply run the command:</p>
 <pre tabindex="0"><code>$ hugo new posts/new-post.md
@@ -143,8 +143,9 @@
 </figure>
 
 <p>It worked perfectly - I can now just either deposit a premade markdown file in my content/posts directory, or use the terminal to create a blank once, fill it with content, and then run a single command to have it converted into blog post (typically in less than 20ms).</p>
-<p>It did take me a little while to figure out the best way to handle embedded images. Hugo has lots of different options for handling them, but a few of them are cumbersome and require writing long relative file paths. The best way to set up your blog images (in my humble experience) is to create a folder for each blog post - if you do this, you can put any embedded images directly in there, and then reference them directly with no file paths (just <code>src=&quot;example.jpg&quot;</code>)</p>
-<h3 id="integration-station">Integration station</h3>
+<p>It did take me a little while to figure out the best way to handle embedded images. Hugo has lots of different options for handling them, but a few of them are cumbersome and require writing long relative file paths. The best way to set up your blog images (in my humble experience) is to create a folder for each blog post - if you do this, you can put any embedded images directly in there, and then reference them directly with no file paths:</p>
+<pre tabindex="0"><code>&lt; figure src=&#34;example.jpg&#34; title=&#34;Some kind of pithy comment here&#34;&gt;
+</code></pre><h3 id="integration-station">Integration station</h3>
 <p>The next step was integrating it with my existing site, which I was nervous about as I&rsquo;m not exactly using Hugo exactly how it was designed - it&rsquo;s designed to be an entire static website generator. Given my main portfolio website is a single page, I figured there were several ways I could tackle this. I didn&rsquo;t want to just have it sat behind a link in a nav bar &ndash; I wanted to surface articles on the existing static page. Step in our old friend, the JSON.</p>
 <figure><img src="/Portfolio-Website/blog/posts/24-08-21-portfolio-website-3-hugo/json.png"><figcaption>
       <h4>If you&#39;re still reading here, then it&#39;s not even worth me apologising for this image is it?</h4>
