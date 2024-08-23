@@ -1,8 +1,8 @@
 {
   "version": "https://jsonfeed.org/version/1",
   "title": "Josh Development Blog",
-  "home_page_url": "https://joshuaisaact.github.io/Portfolio-Website/blog/",
-  "feed_url": "https://joshuaisaact.github.io/Portfolio-Website/blog/index.json",
+  "home_page_url": "http://localhost:1313/Portfolio-Website/blog/",
+  "feed_url": "http://localhost:1313/Portfolio-Website/blog/index.json",
   "description": "<no value>",
   "items": [
     {
