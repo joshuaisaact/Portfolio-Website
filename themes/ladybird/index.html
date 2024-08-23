@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Joshua Tuddenham</title>
+
+    <script src="script.js" defer></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a class="nav-link" id="home-return" href="/">Joshua Tuddenham</a>
+        <ul class="nav-menu">
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#blog">Blog</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+          <li>
+            <a href="https://www.linkedin.com/in/joshuatuddenham/"
+              ><img class="nav-img" src="../../media/nav/linkedin-original.svg"
+            /></a>
+          </li>
+          <li>
+            <a href="https://github.com/joshuaisaact"
+              ><img
+                class="nav-img"
+                id="github"
+                src="../../media/skills/github.svg"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="about-me">
+        <p>
+          Hi! I'm <span class="splash-name">Joshua Tuddenham.</span> I'm a
+          <b>full-stack engineer</b>. Explore my latest projects and check out
+          what I'm currently working on.
+        </p>
+        <img
+          class="profile-img"
+          src="../../media/profile-picture.jpg"
+          alt="picture of Josh Tuddenham"
+          id="bounce"
+        />
+      </section>
+
+      <section class="skills">
+        <h2>Technologies</h2>
+        <div class="skills-list"></div>
+      </section>
+
+      <section class="section projects" id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid"></div>
+        <div class="modal-overlay hidden"></div>
+      </section>
+      <div class="global-overlay hidden"></div>
+      <section class="section blog" id="blog">
+        <h2>Blog</h2>
+        <div class="blog-grid">
+          <!-- <div class="blog-card">
+            <img
+              src="./media/blog/bratquiz.png"
+              class="blog-image"
+              alt=""
+              height="195"
+              width="380"
+            />
+            <h1 class="blog-title">Lorem ipsum dolor sit amet consectetur.</h1>
+            <p class="blog-overview">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+              incidunt fugiat quos porro repellat harum. Adipisci tempora
+              corporis rem cum.
+            </p>
+            <a href="/blog/" class="btn dark">read</a>
+          </div> -->
+        </div>
+      </section>
+
+      <section class="section contact">
+        <h2>Contact</h2>
+        <div class="contact-container">
+          <form method="POST" name="contactForm" id="contact-form">
+            <div class="inputContainer">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="user_name" required />
+            </div>
+
+            <div class="inputContainer">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="user_email" required />
+            </div>
+
+            <div class="inputContainer">
+              <label for="messageBox">Your Message</label>
+              <textarea
+                type="text"
+                id="messagebox"
+                rows="14"
+                name="message"
+                required
+              ></textarea>
+            </div>
+
+            <!-- Honeypot field -->
+            <div class="honeypot-field">
+              <label for="honeypot">Leave this field empty</label>
+              <input type="text" id="honeypot" name="honeypot" />
+            </div>
+
+            <input type="submit" id="submitBtn" class="btn" value="Send" />
+          </form>
+
+          <section class="section contact-info" id="contact">
+            <div class="contact-line">
+              <img
+                src="../../media/nav/email.png"
+                alt="email"
+                width="20"
+                height="20"
+              />
+              <a href="mailto:joshuaisaact@gmail.com">joshuaisaact@gmail.com</a>
+            </div>
+            <div class="contact-line">
+              <img
+                src="../../media/skills/github.svg"
+                alt="github"
+                width="20"
+                height="20"
+              />
+              <a href="https://github.com/joshuaisaact"
+                >github.com/joshuaisaact</a
+              >
+            </div>
+            <div class="contact-line">
+              <img
+                src="../../media/nav/linkedin-plain.svg"
+                alt="linkedin"
+                width="20"
+                height="20"
+              />
+              <a href="https://www.linkedin.com/in/joshuatuddenham/"
+                >linkedin.com/in/joshuatuddenham</a
+              >
+            </div>
+          </section>
+        </div>
+      </section>
+      <!-- <div class="section section-hidden">This will animate</div>
+
+      <button onclick="toggleVisibility()">Toggle Visibility</button>
+
+      <script>
+        function toggleVisibility() {
+          document.querySelector(".section").classList.toggle("section-hidden");
+        }
+      </script> -->
+      <div style="text-align: center; margin-top: 20px">
+        <a href="#" id="return-to-top" class="btn return-to-top">Back to Top</a>
+      </div>
+      <footer>
+        <p>© 2024 Joshua Tuddenham</p>
+      </footer>
+    </main>
+  </body>
+</html>
