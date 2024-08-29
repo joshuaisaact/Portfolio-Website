@@ -1,0 +1,21 @@
+/* src/styles.css */
+@font-face {
+  font-family: "Windsor";
+  src: url("/themes/ladybird/fonts/WindsorProRg.TTF") format("truetype"),
+    url("/themes/ladybird/fonts/WindsorProElongated.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Windsor Bold";
+  src: url("/themes/ladybird/fonts/WindsorProBold.TTF") format("truetype"),
+    url("/fonts/windsor/Windsor-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Other Tailwind imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
