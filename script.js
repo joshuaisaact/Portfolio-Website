@@ -46,17 +46,17 @@ let currentColIndex = 0;
 
 const projects = [
   {
-    imageSrc: './media/projects/streamshuffle.jpg',
-    imageAlt: 'Stream Shuffle logo',
-    title: 'Stream Shuffle',
-    projectLink: 'https://joshuaisaact.github.io/StreamShuffle/',
-    githubLink: 'https://github.com/joshuaisaact/StreamShuffle',
-    skills: ['Express', 'Node', 'Javascript'],
-    description: 'My first ever full-stack project, serving a random film to stream from UK streaming services using the TMDB API',
+    imageSrc: './media/projects/TapMap.png',
+    imageAlt: 'TapMap logo',
+    title: 'TapMap',
+    projectLink: 'https://joshuaisaact.github.io/TapMap/',
+    githubLink: 'https://github.com/joshuaisaact/TapMap',
+    skills: ['Tailwind', 'Javascript', 'CSS', 'HTML'],
+    description: 'A simple web application designed to allow users to mark, categorize and track pubs and breweries on a map.',
     fullDescription: [
-      '<p>A static website built to practise using async fetch API within Javascript, and to practise working with an API key to filter and manipulate JSON files.</p>',
-      '<p>The website interacts with an express.js server hosted on Render that contains a private API key, that it uses to redirect data to the client.</p>',
-      '<p>The TMDB API doesn\'t let ypu filter by films available on UK streaming services, so data manipulation was required to introduce this new functionality</p>'
+      '<p>TapMap is a simple web application designed to allow users to mark and track pubs and breweries on a map. </p>',
+      '<p>This project was built using Leaflet.js for mapping, Tailwind CSS for styling, and Vitest for testing. The main purpose of this project is to enhance my familiarity with Leaflet for interactive maps, Tailwind for responsive design, and writing basic unit tests using Vitest.</p>',
+      '<p>The application is also responsive, with different layouts for mobile and desktop</p>'
     ]
   },
   {
