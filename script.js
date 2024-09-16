@@ -60,6 +60,20 @@ const projects = [
     ]
   },
   {
+    imageSrc: './media/projects/streamshuffle.jpg',
+    imageAlt: 'Stream Shuffle logo',
+    title: 'Stream Shuffle',
+    projectLink: 'https://joshuaisaact.github.io/StreamShuffle/',
+    githubLink: 'https://github.com/joshuaisaact/StreamShuffle',
+    skills: ['Express', 'Node', 'Javascript'],
+    description: 'My first ever full-stack project, serving a random film to stream from UK streaming services using the TMDB API',
+    fullDescription: [
+      '<p>A static website built to practise using async fetch API within Javascript, and to practise working with an API key to filter and manipulate JSON files.</p>',
+      '<p>The website interacts with an express.js server hosted on Render that contains a private API key, that it uses to redirect data to the client.</p>',
+      '<p>The TMDB API doesn\'t let ypu filter by films available on UK streaming services, so data manipulation was required to introduce this new functionality</p>'
+    ]
+  },
+  {
     imageSrc: './media/projects/portfoliowebsite.png',
     imageAlt: 'Portfolio Website',
     title: 'Portfolio Website',
